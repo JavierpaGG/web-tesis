@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ChatBot from '../components/ChatBot.astro';
+
+---
+
+<Layout>
+<!-- Cabecera -->
+<Header/>
+
+<body class="bg-gray-100 text-gray-800">
+	<!-- Sección de Bienvenida -->
+	<div class="bg-violet-800 text-white py-30">
+	  <div class="container mx-auto text-center">
+		<h1 class="text-5xl font-bold mb-4">Bienvenido a la Plataforma Web</h1>
+		<p class="text-xl mb-8">Una solución moderna para tus necesidades digitales.</p>
+		<a href="#herramientas" class="bg-white text-neutral-950 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300">
+		  Explorar Más
+		</a>
+	  </div>
+	</div>
+
+ <div class="mb-5"></div>
+
+	<!--Herramientas tecnológicas-->
+	<section id="herramientas" class="py-16">
+	  <div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12">Conoce las herramientas tecnol&oacute;gicas</h2>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+		  <!-- Herramienta 1 -->
+		  <a href="/canva">
+		  <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+			<div class="text-3xl mb-4">Canva</div>
+			<div class="card-imagen">
+			<img src="canva.jpg" alt="Logo de Canva" class="imagen-home ">
+			</div>
+			<h3 class="text-xl font-bold mb-4">Diseño</h3>
+			<p class="text-gray-600">Ideal para crear recursos visuales atractivos, como infografías y presentaciones interactivas.</p>
+		  </div>
+		</a>
+		  <!-- Herramienta 2 -->
+		   <a href="/kahoot">
+		  <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+			<div class="text-3xl mb-4">Kahoot!</div>
+			<div class="card-imagen">
+			<img src="kahoot.jpg" alt="Logo de Kahoot!" class="imagen-home ">
+			</div>
+			<h3 class="text-xl font-bold mb-4">Cuestionario</h3>
+			<p class="text-gray-600">Te permite crear cuestionarios y actividades interactivas para cualquier materia.</p>
+		  </div>
+		</a>
+		  <!-- Herramienta 3 -->
+		<a href="/teams">
+		  <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+			<div class="text-3xl mb-4">Microsoft Teams</div>
+			<div class="card-imagen">
+			<img src="teams.png" alt="Logo de Microsoft Teams" class="imagen-home ">
+			</div>
+			<h3 class="text-xl font-bold mb-4">Reunion</h3>
+			<p class="text-gray-600">Ideal para clases virtuales, reuniones y colaboración en grupo.</p>
+		  </div>
+		</a>
+	</section>
+
+<!-- Chatbot -->
+<ChatBot/>
+</div>
+
+	<!-- Pie de Página -->
+	<Footer/>
+  </body>
+
+</Layout>

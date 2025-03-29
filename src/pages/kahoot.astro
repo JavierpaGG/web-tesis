@@ -1,0 +1,57 @@
+---
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import ChatBot from '../components/ChatBot.astro';
+---
+
+<Layout>
+    <Header/>
+    <main class="bg-gray-100 font-sans py-10">
+        <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-xl">
+            <h1 class="text-4xl font-bold text-blue-700 text-center">📌 Guía Completa para Docentes: Uso de Kahoot!</h1>
+            <p class="text-gray-600 text-center mt-2 text-lg">Kahoot! es una plataforma de aprendizaje basada en juegos que permite a los docentes crear cuestionarios interactivos para sus estudiantes.</p>
+
+            <h2 class="text-3xl font-semibold text-gray-800 mt-6">🎯 ¿Qué es Kahoot!?</h2>
+            <p class="text-gray-700 mt-2">Kahoot! es una herramienta que transforma el aprendizaje en una experiencia divertida mediante cuestionarios interactivos. Es ideal para reforzar conocimientos y evaluar el progreso de los estudiantes.</p>
+
+            <h2 class="text-3xl font-semibold text-gray-800 mt-6">📖 Beneficios de Usar Kahoot! en la Docencia</h2>
+            <ul class="list-disc list-inside text-gray-700 mt-3 text-lg">
+                <li>✔️ Aumenta la participación de los estudiantes.</li>
+                <li>✔️ Refuerza el aprendizaje a través del juego.</li>
+                <li>✔️ Permite evaluar el progreso en tiempo real.</li>
+                <li>✔️ Compatible con dispositivos móviles y computadoras.</li>
+            </ul>
+
+            <h2 class="text-3xl font-semibold text-gray-800 mt-6">🛠️ Herramientas Clave de Kahoot!</h2>
+            <p class="text-gray-700 mt-2">Kahoot! cuenta con múltiples funciones que facilitan la enseñanza:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div class="p-4 bg-gray-200 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-700">❓ Creación de Cuestionarios</h3>
+                    <p class="text-gray-600">Permite diseñar preguntas interactivas con opciones múltiples.</p>
+                </div>
+                <div class="p-4 bg-gray-200 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-700">📊 Reportes y Análisis</h3>
+                    <p class="text-gray-600">Facilita el seguimiento del desempeño de los estudiantes.</p>
+                </div>
+                <div class="p-4 bg-gray-200 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-700">🎭 Modos de Juego</h3>
+                    <p class="text-gray-600">Diferentes formas de jugar: individual, en equipos o en vivo.</p>
+                </div>
+                <div class="p-4 bg-gray-200 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-700">🔄 Integraciones</h3>
+                    <p class="text-gray-600">Compatible con plataformas como Microsoft Teams y Google Classroom.</p>
+                </div>
+            </div>
+            
+            <h2 class="text-2xl font-semibold text-gray-800 mt-6">🔗 Recursos adicionales</h2>
+            <p class="text-gray-700 mt-2 text-center">Accede a Kahoot! desde su sitio web oficial:</p>
+            <div class="text-center mt-4">
+                <a class="px-5 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition" href="https://kahoot.com/" target="_blank">Ir a Kahoot!</a>
+            </div>
+            <ChatBot></ChatBot>
+        </div>
+    </main>
+    <Footer/>
+</Layout>

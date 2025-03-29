@@ -1,0 +1,132 @@
+---
+// Importar estilos globales
+import "../styles/global.css";
+---
+
+<!-- Contenedor del Chatbot -->
+<div id="chat-container" class="fixed bottom-20 right-5">
+  <!-- Botón para abrir/cerrar el chat -->
+  <button
+    id="chat-toggle"
+    class="bg-stone-800 text-white p-3 rounded-full shadow-lg"
+  >
+    💬
+  </button>
+
+  <!-- Caja del chat -->
+  <div
+    id="chat-box"
+    class="hidden w-80 h-96 bg-stone-200 shadow-lg rounded-lg p-4 flex flex-col"
+  >
+    <!-- Mensajes del chat -->
+    <div
+      id="chat-messages"
+      class="h-72 overflow-y-auto border-b mb-2 p-2 text-sm flex flex-col space-y-2"
+    >
+    </div>
+
+    <!-- Input y botones -->
+    <div class="flex">
+      <input
+        id="chat-input"
+        type="text"
+        class="flex-1 p-2 border rounded"
+        placeholder="Escribe un mensaje..."
+      />
+      <button id="chat-send" class="ml-2 bg-stone-600 text-white p-2 rounded">
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatBox = document.getElementById("chat-box");
+    const chatMessages = document.getElementById("chat-messages");
+    const chatInput = document.getElementById("chat-input") as HTMLInputElement;
+    const chatSend = document.getElementById("chat-send");
+
+    if (!chatToggle || !chatBox || !chatMessages || !chatInput || !chatSend) {
+      console.error(
+        "Uno o más elementos del chat no se encontraron en el DOM."
+      );
+      return;
+    }
+
+    // Mostrar/ocultar chat
+    chatToggle.addEventListener("click", () => {
+      chatBox.classList.toggle("hidden");
+    });
+
+    // Cargar historial desde localStorage
+    const savedChat = localStorage.getItem("chatHistory");
+    if (savedChat) {
+      chatMessages.innerHTML = savedChat;
+    }
+
+    // Enviar mensaje
+    chatSend.addEventListener("click", async () => {
+      const userMessage = chatInput.value.trim();
+      if (!userMessage) return;
+
+      // Agregar mensaje del usuario con formato
+      chatMessages.innerHTML += `
+        <div class="text-right bg-green-100 text-stone-900 p-2 rounded-lg self-end w-fit max-w-[75%]">
+          Tú: ${userMessage}
+        </div>
+      `;
+      chatInput.value = "";
+
+      // Guardar historial en localStorage
+      localStorage.setItem("chatHistory", chatMessages.innerHTML);
+
+      // Enviar mensaje a la API de Gemini
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: userMessage }),
+        });
+
+        const data = await response.json();
+        let botReply = data.reply || "No entiendo la pregunta.";
+
+        // Formatear respuesta del bot (saltos de línea y listas)
+        let formattedReply = botReply.replace(/\n/g, "<br>");
+        if (formattedReply.includes("- ")) {
+          const listItems = formattedReply
+            .split("- ")
+            .filter((item: string) => item.trim() !== "")
+            .map((item: string) => `<li>${item.trim()}</li>`)
+            .join("");
+
+          formattedReply = `<ul class="list-disc pl-5">${listItems}</ul>`;
+        }
+
+        // Agregar respuesta del bot con estilos
+        chatMessages.innerHTML += `
+          <div class="text-left bg-gray-100 text-gray-700 p-2 rounded-lg self-start w-fit max-w-[75%]">
+            <strong>Bot:</strong> ${formattedReply}
+          </div>
+        `;
+
+        // Guardar historial en localStorage
+        localStorage.setItem("chatHistory", chatMessages.innerHTML);
+
+        // Auto-scroll al último mensaje
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      } catch (error) {
+        console.error("Error al conectar con la API:", error);
+      }
+    });
+
+    // Permitir enviar mensaje con "Enter"
+    chatInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        chatSend.click();
+      }
+    });
+  });
+</script>

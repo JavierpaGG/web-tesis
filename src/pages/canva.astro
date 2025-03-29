@@ -1,0 +1,62 @@
+---
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import ChatBot from '../components/ChatBot.astro';
+---
+
+<Layout>
+    <Header/>
+    <main class="bg-gray-100 font-sans py-10">
+        <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-xl">
+            <h1 class="text-4xl font-bold text-blue-700 text-center">📌 Guía Completa para Docentes: Uso de Canva</h1>
+            <p class="text-gray-600 text-center mt-2 text-lg">Canva es una plataforma de diseño gráfico fácil de usar. Permite crear contenido visual de calidad sin conocimientos avanzados en diseño.</p>
+
+            <h2 class="text-3xl font-semibold text-gray-800 mt-6">🎨 ¿Qué es Canva?</h2>
+            <p class="text-gray-700 mt-2">Canva es una herramienta en línea que permite diseñar presentaciones, infografías, publicaciones para redes sociales y documentos profesionales. Es intuitivo y ofrece miles de plantillas gratuitas para facilitar el proceso de creación.</p>
+
+            <h2 class="text-3xl font-semibold text-gray-800 mt-6">📖 Beneficios de Usar Canva en la Docencia</h2>
+            <ul class="list-disc list-inside text-gray-700 mt-3 text-lg">
+                <li>✔️ Ahorro de tiempo con plantillas prediseñadas.</li>
+                <li>✔️ Fácil personalización de contenido visual.</li>
+                <li>✔️ Acceso gratuito con múltiples recursos.</li>
+                <li>✔️ Ideal para material didáctico interactivo.</li>
+            </ul>
+
+            <h2 class="text-3xl font-semibold text-gray-800 mt-6">🛠️ Herramientas Clave de Canva</h2>
+            <p class="text-gray-700 mt-2">Canva cuenta con diversas herramientas que pueden potenciar el trabajo de los docentes:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div class="p-4 bg-gray-200 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-700">🎭 Plantillas Personalizables</h3>
+                    <p class="text-gray-600">Miles de diseños listos para adaptar a tus necesidades educativas.</p>
+                </div>
+                <div class="p-4 bg-gray-200 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-700">🖼️ Biblioteca de Imágenes</h3>
+                    <p class="text-gray-600">Acceso a una amplia colección de fotos e ilustraciones gratuitas.</p>
+                </div>
+                <div class="p-4 bg-gray-200 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-700">🔠 Fuentes y Tipografías</h3>
+                    <p class="text-gray-600">Variedad de estilos para mejorar la presentación de tus textos.</p>
+                </div>
+                <div class="p-4 bg-gray-200 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-700">🎥 Creación de Videos</h3>
+                    <p class="text-gray-600">Opciones para editar y diseñar presentaciones animadas.</p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-semibold text-gray-800 mt-6">📌 Ejemplo de Diseño en Canva</h2>
+            <div class="flex justify-center mt-4">
+                <img class="rounded-lg shadow-md w-full md:w-2/3" src="/ejemplo-canva.webp" alt="Ejemplo de diseño en Canva">
+            </div>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-6">🔗 Recursos adicionales</h2>
+        <p class="text-gray-700 mt-2 text-center">Accede a Canva desde su sitio web oficial:</p>
+        <div class="text-center mt-4">
+            <a class="px-5 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition" href="https://www.canva.com/" target="_blank">Ir a Canva</a>
+        </div>
+        <ChatBot></ChatBot>
+        </div>
+    </main>
+    <Footer/>
+</Layout>
