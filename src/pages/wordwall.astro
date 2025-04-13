@@ -1,0 +1,384 @@
+---
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import ChatBot from '../components/ChatBot.astro';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
+<Layout>
+    <Header/>
+    <main class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans py-12 min-h-screen">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+            <!-- Hero Section -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 border border-gray-100">
+                <div class="p-8 sm:p-10 text-center">
+                    <div class="inline-block bg-gradient-to-r from-orange-500 to-yellow-500 p-4 rounded-full mb-6">
+                        <i class="fas fa-puzzle-piece text-white text-3xl"></i>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
+                        Crea Actividades Interactivas con <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">Wordwall</span>
+                    </h1>
+                    <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+                        Transforma tus lecciones en juegos educativos atractivos para tus estudiantes de secundaria.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Sections -->
+            <div class="space-y-10">
+                <!-- Introducción -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-question-circle text-orange-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">¿Qué es Wordwall?</h2>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Wordwall es una plataforma que permite crear actividades educativas interactivas en minutos, perfecta para:
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Reforzar vocabulario y conceptos clave</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Gamificar el aprendizaje</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Evaluar de forma lúdica</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 bg-orange-50 p-4 rounded-lg border border-orange-100">
+                        <h3 class="font-semibold text-orange-800 mb-2 flex items-center">
+                            <i class="fas fa-graduation-cap text-orange-600 mr-2"></i> Planes para Educadores
+                        </h3>
+                        <p class="text-gray-600 text-sm">Wordwall ofrece <strong>acceso gratuito con opción premium</strong> para crear recursos ilimitados.</p>
+                    </div>
+                </section>
+
+                <!-- Beneficios Educativos -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-star text-yellow-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Ventajas para el Aula</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-bolt text-orange-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Creación Rápida</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Genera actividades en menos de 5 minutos.</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-random text-yellow-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Formatos Variados</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">18+ tipos de actividades diferentes.</p>
+                        </div>
+                        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-chart-bar text-amber-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Resultados Automáticos</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Reportes de desempeño instantáneos.</p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-mobile-alt text-orange-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Acceso desde Cualquier Dispositivo</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Tablets, celulares o computadoras.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tipos de Actividades -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-th-large text-yellow-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Formatos de Actividades</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-orange-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-200 transition">
+                                <i class="fas fa-th text-orange-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Sopa de Letras</h3>
+                            <p class="text-gray-600 text-sm">Refuerza vocabulario técnico de cada asignatura.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-yellow-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-200 transition">
+                                <i class="fas fa-question text-yellow-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Quiz</h3>
+                            <p class="text-gray-600 text-sm">Evaluaciones formativas con temporizador.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-amber-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-amber-200 transition">
+                                <i class="fas fa-puzzle-piece text-amber-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Crucigramas</h3>
+                            <p class="text-gray-600 text-sm">Para definir conceptos clave.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-orange-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-200 transition">
+                                <i class="fas fa-random text-orange-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Emparejamiento</h3>
+                            <p class="text-gray-600 text-sm">Relacionar conceptos con definiciones.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Estrategias Didácticas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-chalkboard-teacher text-amber-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Estrategias para Secundaria</h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-orange-50 rounded-lg border border-orange-100">
+                            <h3 class="font-bold text-orange-800 mb-2 flex items-center">
+                                <i class="fas fa-bell mr-2"></i> Actividad de Inicio
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Usa Wordwall para:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Activar conocimientos previos</li>
+                                <li>Introducir nuevo vocabulario</li>
+                                <li>Generar expectativa sobre el tema</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-100">
+                            <h3 class="font-bold text-yellow-800 mb-2 flex items-center">
+                                <i class="fas fa-book mr-2"></i> Aprendizaje Autónomo
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Asigna actividades como:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Tarea de repaso</li>
+                                <li>Refuerzo para estudiantes con dificultades</li>
+                                <li>Preparación para evaluaciones</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-amber-50 rounded-lg border border-amber-100">
+                            <h3 class="font-bold text-amber-800 mb-2 flex items-center">
+                                <i class="fas fa-users mr-2"></i> Trabajo en Equipo
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Organiza:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Competencias entre grupos</li>
+                                <li>Retos colaborativos</li>
+                                <li>Juegos de repaso antes de exámenes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Por Asignaturas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-book-open text-orange-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Aplicación por Materia</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                            <h3 class="font-semibold text-orange-800 mb-2 flex items-center">
+                                <i class="fas fa-flask text-orange-600 mr-2"></i> Ciencias
+                            </h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Sopas de letras con términos científicos</li>
+                                <li>Emparejar elementos con sus símbolos</li>
+                                <li>Ordenar pasos del método científico</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                            <h3 class="font-semibold text-yellow-800 mb-2 flex items-center">
+                                <i class="fas fa-landmark text-yellow-600 mr-2"></i> Historia
+                            </h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Líneas de tiempo interactivas</li>
+                                <li>Relacionar personajes con sus logros</li>
+                                <li>Quizzes sobre fechas clave</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100">
+                            <h3 class="font-semibold text-amber-800 mb-2 flex items-center">
+                                <i class="fas fa-language text-amber-600 mr-2"></i> Lengua
+                            </h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Identificar partes de la oración</li>
+                                <li>Completar textos literarios</li>
+                                <li>Sinónimos y antónimos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                            <h3 class="font-semibold text-orange-800 mb-2 flex items-center">
+                                <i class="fas fa-square-root-alt text-orange-600 mr-2"></i> Matemáticas
+                            </h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Emparejar fórmulas con sus nombres</li>
+                                <li>Resolver problemas con opciones</li>
+                                <li>Términos algebraicos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tutorial Básico -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-play-circle text-yellow-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Cómo Crear tu Primera Actividad</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-orange-600 font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Selecciona un formato</h3>
+                                    <p class="text-gray-600 text-sm">Elige entre los 18+ tipos de actividades disponibles</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-yellow-600 font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Ingresa tu contenido</h3>
+                                    <p class="text-gray-600 text-sm">Preguntas, palabras o conceptos clave</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-amber-600 font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Personaliza el diseño</h3>
+                                    <p class="text-gray-600 text-sm">Tema, colores y tipografía</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-orange-600 font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Configura opciones</h3>
+                                    <p class="text-gray-600 text-sm">Dificultad, tiempo límite, etc.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-yellow-600 font-bold">5</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Publica y comparte</h3>
+                                    <p class="text-gray-600 text-sm">Obtén el enlace o código para estudiantes</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-amber-600 font-bold">6</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Analiza resultados</h3>
+                                    <p class="text-gray-600 text-sm">Revisa el desempeño de tus estudiantes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Consejos Avanzados -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-lightbulb text-orange-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Consejos para Docentes</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                            <h3 class="font-semibold text-yellow-800 mb-2 flex items-center">
+                                <i class="fas fa-save text-yellow-600 mr-2"></i> Reutiliza Plantillas
+                            </h3>
+                            <p class="text-gray-600 text-sm">Guarda tus actividades como plantillas para futuros usos.</p>
+                        </div>
+                        
+                        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100">
+                            <h3 class="font-semibold text-amber-800 mb-2 flex items-center">
+                                <i class="fas fa-exchange-alt text-amber-600 mr-2"></i> Cambia de Formato
+                            </h3>
+                            <p class="text-gray-600 text-sm">Transforma el mismo contenido a diferentes tipos de actividad.</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                            <h3 class="font-semibold text-orange-800 mb-2 flex items-center">
+                                <i class="fas fa-users text-orange-600 mr-2"></i> Crea Retos Grupales
+                            </h3>
+                            <p class="text-gray-600 text-sm">Divide la clase en equipos para competencias sanas.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                            <h3 class="font-semibold text-yellow-800 mb-2 flex items-center">
+                                <i class="fas fa-print text-yellow-600 mr-2"></i> Versión Impresa
+                            </h3>
+                            <p class="text-gray-600 text-sm">Descarga actividades como PDF para tareas tradicionales.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="bg-gradient-to-r from-orange-500 to-yellow-500 p-8 rounded-xl shadow-lg text-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">¿Listo para crear actividades interactivas?</h2>
+                    <p class="text-orange-100 mb-6 max-w-2xl mx-auto">
+                        Transforma tus lecciones en experiencias de aprendizaje memorables.
+                    </p>
+                    <a href="https://wordwall.net/" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Comenzar con Wordwall
+                    </a>
+                </section>
+            </div>
+        </div>
+        <ChatBot/>
+    </main>
+    <Footer/>
+</Layout>

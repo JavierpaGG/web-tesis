@@ -1,14 +1,72 @@
----
-import "../styles/global.css"
----
+<footer class="bg-gradient-to-br from-indigo-900 to-purple-800 text-white">
+  <div class="container mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Información del Colegio -->
+      <div>
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-graduation-cap text-yellow-400 mr-3"></i>
+          Colegio San Luis Gonzaga
+        </h3>
+        <p class="opacity-90 mb-6">
+          Institución educativa comprometida con la excelencia académica y formación integral de nuestros estudiantes.
+        </p>
+        <div>
+          <a href="https://www.facebook.com/iesanluisgonzagadeica?locale=es_LA" 
+             class="flex items-center space-x-2 text-white hover:text-blue-400 text-lg font-medium transition-colors duration-200" 
+             rel="noopener noreferrer"
+             aria-label="Ir a la página de Facebook">
+            <i class="fab fa-facebook-f text-xl"></i>
+            <span>Síguenos en Facebook</span>
+          </a>
+        </div>
+        
+      </div>
 
-<footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto text-center">
-      <p class="mb-4">&copy; 2025 Plataforma Web - San Luis Gonzaga.</p>
-      <div class="flex justify-center space-x-4">
-        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Inicio</a>
-        <a href="#herramientas" class="text-gray-400 hover:text-white transition duration-300">Herramientas</a>
-        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Contacto</a>
+      <!-- Contacto -->
+      <div>
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-envelope text-yellow-400 mr-3"></i>
+          Contacto
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-4"></i>
+            <div>
+              <p class="opacity-90">AV. Jose Matias Manzanilla N° 187</p>
+              <p class="opacity-90">Ica - Perú</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-envelope text-yellow-400 mt-1 mr-4"></i>
+            <p class="opacity-90">mesadepartes@ieslg.edu.pe</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Enlaces Rápidos -->
+      <div>
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-link text-yellow-400 mr-3"></i>
+          Enlaces Rápidos
+        </h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="/" class="opacity-90 hover:opacity-100 hover:text-yellow-400 transition">
+              <i class="fas fa-chevron-right text-xs mr-2 text-yellow-400"></i> Inicio
+            </a>
+          </li>
+          <li>
+            <a href="/herramientas" class="opacity-90 hover:opacity-100 hover:text-yellow-400 transition">
+              <i class="fas fa-chevron-right text-xs mr-2 text-yellow-400"></i> Herramientas educativos
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-  </footer>
+
+    <!-- Derechos de Autor -->
+    <div class="border-t border-white/20 mt-12 pt-8 text-center opacity-80 text-sm">
+      <p>© 2025 I.E. San Luis Gonzaga. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

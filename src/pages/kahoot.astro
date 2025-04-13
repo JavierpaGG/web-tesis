@@ -4,54 +4,291 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Layout from "../layouts/Layout.astro";
 import ChatBot from '../components/ChatBot.astro';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 ---
 
 <Layout>
     <Header/>
-    <main class="bg-gray-100 font-sans py-10">
-        <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-xl">
-            <h1 class="text-4xl font-bold text-blue-700 text-center">📌 Guía Completa para Docentes: Uso de Kahoot!</h1>
-            <p class="text-gray-600 text-center mt-2 text-lg">Kahoot! es una plataforma de aprendizaje basada en juegos que permite a los docentes crear cuestionarios interactivos para sus estudiantes.</p>
-
-            <h2 class="text-3xl font-semibold text-gray-800 mt-6">🎯 ¿Qué es Kahoot!?</h2>
-            <p class="text-gray-700 mt-2">Kahoot! es una herramienta que transforma el aprendizaje en una experiencia divertida mediante cuestionarios interactivos. Es ideal para reforzar conocimientos y evaluar el progreso de los estudiantes.</p>
-
-            <h2 class="text-3xl font-semibold text-gray-800 mt-6">📖 Beneficios de Usar Kahoot! en la Docencia</h2>
-            <ul class="list-disc list-inside text-gray-700 mt-3 text-lg">
-                <li>✔️ Aumenta la participación de los estudiantes.</li>
-                <li>✔️ Refuerza el aprendizaje a través del juego.</li>
-                <li>✔️ Permite evaluar el progreso en tiempo real.</li>
-                <li>✔️ Compatible con dispositivos móviles y computadoras.</li>
-            </ul>
-
-            <h2 class="text-3xl font-semibold text-gray-800 mt-6">🛠️ Herramientas Clave de Kahoot!</h2>
-            <p class="text-gray-700 mt-2">Kahoot! cuenta con múltiples funciones que facilitan la enseñanza:</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                <div class="p-4 bg-gray-200 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-blue-700">❓ Creación de Cuestionarios</h3>
-                    <p class="text-gray-600">Permite diseñar preguntas interactivas con opciones múltiples.</p>
-                </div>
-                <div class="p-4 bg-gray-200 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-blue-700">📊 Reportes y Análisis</h3>
-                    <p class="text-gray-600">Facilita el seguimiento del desempeño de los estudiantes.</p>
-                </div>
-                <div class="p-4 bg-gray-200 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-blue-700">🎭 Modos de Juego</h3>
-                    <p class="text-gray-600">Diferentes formas de jugar: individual, en equipos o en vivo.</p>
-                </div>
-                <div class="p-4 bg-gray-200 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-blue-700">🔄 Integraciones</h3>
-                    <p class="text-gray-600">Compatible con plataformas como Microsoft Teams y Google Classroom.</p>
+    <main class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans py-12 min-h-screen">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+            <!-- Hero Section -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 border border-gray-100">
+                <div class="p-8 sm:p-10 text-center">
+                    <div class="inline-block bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full mb-6">
+                        <i class="fas fa-gamepad text-white text-3xl"></i>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
+                        Aprende jugando con <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Kahoot!</span>
+                    </h1>
+                    <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+                        La plataforma que transforma el aprendizaje en un juego divertido y competitivo.
+                    </p>
                 </div>
             </div>
-            
-            <h2 class="text-2xl font-semibold text-gray-800 mt-6">🔗 Recursos adicionales</h2>
-            <p class="text-gray-700 mt-2 text-center">Accede a Kahoot! desde su sitio web oficial:</p>
-            <div class="text-center mt-4">
-                <a class="px-5 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition" href="https://kahoot.com/" target="_blank">Ir a Kahoot!</a>
+
+            <!-- Content Sections -->
+            <div class="space-y-10">
+                <!-- Introducción -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-brain text-purple-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">¿Por qué Kahoot! en educación?</h2>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Kahoot! revoluciona el aula con aprendizaje gamificado que ofrece:
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Cuestionarios interactivos tipo concurso</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Participación activa de todos los estudiantes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Retroalimentación inmediata</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                        <h3 class="font-semibold text-purple-800 mb-2 flex items-center">
+                            <i class="fas fa-chalkboard-teacher text-purple-600 mr-2"></i> Kahoot! para Educadores
+                        </h3>
+                        <p class="text-gray-600 text-sm">Los profesores pueden acceder a <strong>Kahoot! EDU</strong> con funciones premium para crear experiencias de aprendizaje más completas.</p>
+                    </div>
+                </section>
+
+                <!-- Tipos de Kahoots -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-pink-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-chess text-pink-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Tipos de Actividades</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-question-circle text-purple-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Quiz</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">El clásico cuestionario con preguntas de opción múltiple y temporizador.</p>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-lg border border-pink-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-poll text-pink-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Encuesta</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Recoge opiniones sin respuestas correctas/incorrectas.</p>
+                        </div>
+                        <div class="bg-fuchsia-50 p-4 rounded-lg border border-fuchsia-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-puzzle-piece text-fuchsia-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Jumble</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Ordena elementos en la secuencia correcta.</p>
+                        </div>
+                        <div class="bg-rose-50 p-4 rounded-lg border border-rose-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-comment-dots text-rose-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Discusión</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Inicia conversaciones con preguntas abiertas.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Beneficios Educativos -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-fuchsia-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-graduation-cap text-fuchsia-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Beneficios Pedagógicos</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition">
+                                <i class="fas fa-bolt text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Aprendizaje Activo</h3>
+                            <p class="text-gray-600 text-sm">Los estudiantes participan al 100% convirtiéndose en protagonistas de su aprendizaje.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-pink-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-pink-200 transition">
+                                <i class="fas fa-chart-line text-pink-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Evaluación Formativa</h3>
+                            <p class="text-gray-600 text-sm">Identifica inmediatamente qué conceptos necesitan refuerzo.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-fuchsia-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-fuchsia-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-fuchsia-200 transition">
+                                <i class="fas fa-smile text-fuchsia-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Motivación</h3>
+                            <p class="text-gray-600 text-sm">La gamificación aumenta el compromiso y la retención.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-rose-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-rose-200 transition">
+                                <i class="fas fa-users text-rose-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Aprendizaje Social</h3>
+                            <p class="text-gray-600 text-sm">Fomenta la competencia sana y el trabajo en equipo.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Modos de Juego -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-rose-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-tv text-rose-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Cómo Jugar</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="group p-4 bg-white border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-lg transition-all text-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-purple-200 transition">
+                                <span class="text-purple-600 font-bold">1</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 mb-2">Crea o Elige</h3>
+                            <p class="text-gray-600 text-sm">Selecciona un kahoot de la biblioteca o diseña el tuyo.</p>
+                        </div>
+                        
+                        <div class="group p-4 bg-white border border-gray-200 rounded-lg hover:border-pink-300 hover:shadow-lg transition-all text-center">
+                            <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-pink-200 transition">
+                                <span class="text-pink-600 font-bold">2</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 mb-2">Comparte el PIN</h3>
+                            <p class="text-gray-600 text-sm">Los estudiantes ingresan en kahoot.it con el código del juego.</p>
+                        </div>
+                        
+                        <div class="group p-4 bg-white border border-gray-200 rounded-lg hover:border-fuchsia-300 hover:shadow-lg transition-all text-center">
+                            <div class="w-12 h-12 bg-fuchsia-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-fuchsia-200 transition">
+                                <span class="text-fuchsia-600 font-bold">3</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 mb-2">¡A Jugar!</h3>
+                            <p class="text-gray-600 text-sm">Preguntas aparecen en la pantalla principal, respuestas en dispositivos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg border border-purple-200">
+                        <h3 class="font-semibold text-purple-800 mb-2 flex items-center">
+                            <i class="fas fa-lightbulb text-purple-600 mr-2"></i> Modalidades Alternativas
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div>
+                                <h4 class="text-sm font-medium text-pink-800">Modo Asignación</h4>
+                                <p class="text-gray-600 text-xs">Los estudiantes completan el kahoot a su propio ritmo como tarea.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-pink-800">Modo Equipo</h4>
+                                <p class="text-gray-600 text-xs">Juegan en grupos colaborativos con un solo dispositivo por equipo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Para Educadores -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-user-tie text-purple-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Funciones para Educadores</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-pink-50 p-4 rounded-lg border border-pink-100">
+                            <h3 class="font-semibold text-pink-800 mb-2 flex items-center">
+                                <i class="fas fa-database text-pink-600 mr-2"></i> Biblioteca de Kahoots
+                            </h3>
+                            <p class="text-gray-600 text-sm">Accede a millones de cuestionarios creados por otros educadores.</p>
+                        </div>
+                        
+                        <div class="bg-fuchsia-50 p-4 rounded-lg border border-fuchsia-100">
+                            <h3 class="font-semibold text-fuchsia-800 mb-2 flex items-center">
+                                <i class="fas fa-chart-bar text-fuchsia-600 mr-2"></i> Reportes Detallados
+                            </h3>
+                            <p class="text-gray-600 text-sm">Descarga datos de desempeño por estudiante o pregunta.</p>
+                        </div>
+                        
+                        <div class="bg-rose-50 p-4 rounded-lg border border-rose-100">
+                            <h3 class="font-semibold text-rose-800 mb-2 flex items-center">
+                                <i class="fas fa-copy text-rose-600 mr-2"></i> Duplicar y Adaptar
+                            </h3>
+                            <p class="text-gray-600 text-sm">Personaliza kahoots existentes para tus necesidades.</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                            <h3 class="font-semibold text-purple-800 mb-2 flex items-center">
+                                <i class="fas fa-shield-alt text-purple-600 mr-2"></i> Kahoot! EDU
+                            </h3>
+                            <p class="text-gray-600 text-sm">Acceso premium para instituciones educativas.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ideas para el Aula -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-pink-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-lightbulb text-pink-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Ideas Creativas para Clases</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200">
+                            <h3 class="font-bold text-purple-800 mb-2">🥇 Repaso Pre-Examen</h3>
+                            <p class="text-gray-600 text-sm">Crea un torneo de kahoots con los temas del examen. Los estudiantes compiten por el primer lugar mientras repasan.</p>
+                        </div>
+                        
+                        <div class="p-4 bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded-lg border border-pink-200">
+                            <h3 class="font-bold text-pink-800 mb-2">📚 Club de Lectura</h3>
+                            <p class="text-gray-600 text-sm">Después de leer un libro, juega un kahoot sobre personajes, tramas y detalles clave.</p>
+                        </div>
+                        
+                        <div class="p-4 bg-gradient-to-r from-fuchsia-50 to-rose-50 rounded-lg border border-fuchsia-200">
+                            <h3 class="font-bold text-fuchsia-800 mb-2">🧪 Experimentos Científicos</h3>
+                            <p class="text-gray-600 text-sm">Antes de un laboratorio, evalúa la comprensión de los pasos y precauciones con un kahoot interactivo.</p>
+                        </div>
+                        
+                        <div class="p-4 bg-gradient-to-r from-rose-50 to-purple-50 rounded-lg border border-rose-200">
+                            <h3 class="font-bold text-rose-800 mb-2">🌍 Geografía Competitiva</h3>
+                            <p class="text-gray-600 text-sm">Usa imágenes de mapas y banderas para crear desafíos geográficos contra reloj.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="bg-gradient-to-r from-purple-600 to-pink-500 p-8 rounded-xl shadow-lg text-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">¡Haz que el aprendizaje sea memorable!</h2>
+                    <p class="text-purple-100 mb-6 max-w-2xl mx-auto">
+                        Únete a millones de educadores que usan Kahoot! para crear clases dinámicas donde los estudiantes piden jugar "una vez más".
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="https://kahoot.com/schools/" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="fas fa-school mr-2"></i>
+                            Kahoot! para Escuelas
+                        </a>
+                        <a href="https://kahoot.com/" target="_blank" class="inline-flex items-center px-6 py-3 bg-black text-white font-semibold rounded-lg shadow-md hover:bg-gray-800 transition duration-300">
+                            <i class="fas fa-gamepad mr-2"></i>
+                            Crear Kahoot Gratis
+                        </a>
+                    </div>
+                </section>
             </div>
-            <ChatBot></ChatBot>
         </div>
+        <ChatBot/>
     </main>
     <Footer/>
 </Layout>

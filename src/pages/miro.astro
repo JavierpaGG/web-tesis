@@ -1,0 +1,388 @@
+---
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import ChatBot from '../components/ChatBot.astro';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
+<Layout>
+    <Header/>
+    <main class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans py-12 min-h-screen">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+            <!-- Hero Section -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 border border-gray-100">
+                <div class="p-8 sm:p-10 text-center">
+                    <div class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-full mb-6">
+                        <i class="fas fa-chalkboard text-white text-3xl"></i>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
+                        Colaboración Visual con <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Miro</span>
+                    </h1>
+                    <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+                        La pizarra digital infinita para el aprendizaje colaborativo en secundaria
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Sections -->
+            <div class="space-y-10">
+                <!-- Introducción -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-question-circle text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">¿Qué es Miro?</h2>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Miro es una pizarra colaborativa en línea que permite a docentes y estudiantes trabajar juntos en tiempo real, ideal para:
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Lluvias de ideas visuales</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Organización de conceptos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Trabajo en equipo remoto o presencial</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                            <i class="fas fa-chalkboard-teacher text-blue-600 mr-2"></i> Plan Educativo Gratuito
+                        </h3>
+                        <p class="text-gray-600 text-sm">Miro ofrece <strong>cuentas gratuitas para educadores</strong> con hasta 100 tableros editables.</p>
+                    </div>
+                </section>
+
+                <!-- Beneficios Educativos -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-star text-purple-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Beneficios Pedagógicos</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-users text-blue-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Colaboración en Tiempo Real</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Hasta 50 estudiantes pueden editar simultáneamente.</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-project-diagram text-purple-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Pensamiento Visual</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Desarrolla habilidades de organización gráfica.</p>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-infinity text-indigo-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Espacio Infinito</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Amplía tus proyectos sin límites de espacio.</p>
+                        </div>
+                        <div class="bg-violet-50 p-4 rounded-lg border border-violet-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-puzzle-piece text-violet-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Integraciones</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Conecta con Google Drive, Microsoft Teams y más.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Plantillas Educativas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-clipboard-list text-indigo-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Plantillas para el Aula</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition">
+                                <i class="fas fa-sitemap text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Mapas Conceptuales</h3>
+                            <p class="text-gray-600 text-sm">Organiza ideas y relaciones entre conceptos.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition">
+                                <i class="fas fa-clock text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Líneas de Tiempo</h3>
+                            <p class="text-gray-600 text-sm">Visualiza eventos históricos o procesos.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-indigo-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition">
+                                <i class="fas fa-lightbulb text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Lluvia de Ideas</h3>
+                            <p class="text-gray-600 text-sm">Captura y organiza ideas creativas.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-violet-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-violet-200 transition">
+                                <i class="fas fa-tasks text-violet-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Gestión de Proyectos</h3>
+                            <p class="text-gray-600 text-sm">Organiza trabajos grupales con metodologías ágiles.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Estrategias Didácticas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-violet-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-atom text-violet-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Estrategias con Miro</h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                            <h3 class="font-bold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-users mr-2"></i> Aprendizaje Cooperativo
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Actividades grupales:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Construcción colectiva de conocimientos</li>
+                                <li>Retroalimentación entre pares con comentarios</li>
+                                <li>Roles diferenciados en equipos de trabajo</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-purple-50 rounded-lg border border-purple-100">
+                            <h3 class="font-bold text-purple-800 mb-2 flex items-center">
+                                <i class="fas fa-brain mr-2"></i> Pensamiento Crítico
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Desarrolla habilidades:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Análisis comparativo con diagramas Venn</li>
+                                <li>Identificación de causas-efectos</li>
+                                <li>Clasificación y categorización de conceptos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-indigo-50 rounded-lg border border-indigo-100">
+                            <h3 class="font-bold text-indigo-800 mb-2 flex items-center">
+                                <i class="fas fa-laptop-code mr-2"></i> Aula Híbrida
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Para clases semipresenciales:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Participación equitativa de estudiantes presenciales y remotos</li>
+                                <li>Espacio común para materiales y discusiones</li>
+                                <li>Seguimiento del trabajo asincrónico</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Por Asignaturas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-book-open text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Aplicación por Materia</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition">
+                                <i class="fas fa-dna text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Ciencias</h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Diagramas de procesos biológicos</li>
+                                <li>Clasificación de especies</li>
+                                <li>Modelos atómicos colaborativos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition">
+                                <i class="fas fa-landmark text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Historia</h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Líneas de tiempo interactivas</li>
+                                <li>Mapas de conquistas y migraciones</li>
+                                <li>Análisis comparativo de culturas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-indigo-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition">
+                                <i class="fas fa-book text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Literatura</h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Mapas de personajes y relaciones</li>
+                                <li>Análisis de estructura narrativa</li>
+                                <li>Comparación de estilos literarios</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-violet-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-violet-200 transition">
+                                <i class="fas fa-square-root-alt text-violet-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Matemáticas</h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Resolución colaborativa de problemas</li>
+                                <li>Diagramas de flujo para demostraciones</li>
+                                <li>Clasificación de conceptos geométricos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tutorial Básico -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-play-circle text-purple-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Primeros Pasos con Miro</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Crea un tablero</h3>
+                                    <p class="text-gray-600 text-sm">Elige un espacio en blanco o una plantilla educativa</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-purple-600 font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Añade contenido</h3>
+                                    <p class="text-gray-600 text-sm">Texto, imágenes, notas adhesivas, diagramas</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-indigo-600 font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Organiza la información</h3>
+                                    <p class="text-gray-600 text-sm">Agrupa elementos con frames o conectores</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-violet-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-violet-600 font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Invita a colaboradores</h3>
+                                    <p class="text-gray-600 text-sm">Comparte el enlace con estudiantes o colegas</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold">5</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Colabora en tiempo real</h3>
+                                    <p class="text-gray-600 text-sm">Trabaja simultáneamente con toda la clase</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-purple-600 font-bold">6</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Exporta o presenta</h3>
+                                    <p class="text-gray-600 text-sm">Guarda como imagen o PDF, o presenta directamente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Consejos Avanzados -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-graduation-cap text-indigo-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Consejos para el Aula</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-layer-group text-blue-600 mr-2"></i> Organiza con Capas
+                            </h3>
+                            <p class="text-gray-600 text-sm">Usa frames para separar temas o grupos de trabajo.</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                            <h3 class="font-semibold text-purple-800 mb-2 flex items-center">
+                                <i class="fas fa-tags text-purple-600 mr-2"></i> Sistema de Etiquetas
+                            </h3>
+                            <p class="text-gray-600 text-sm">Clasifica contenido con códigos de colores.</p>
+                        </div>
+                        
+                        <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                            <h3 class="font-semibold text-indigo-800 mb-2 flex items-center">
+                                <i class="fas fa-history text-indigo-600 mr-2"></i> Historial de Versiones
+                            </h3>
+                            <p class="text-gray-600 text-sm">Revisa cambios y recupera estados anteriores.</p>
+                        </div>
+                        
+                        <div class="bg-violet-50 p-4 rounded-lg border border-violet-100">
+                            <h3 class="font-semibold text-violet-800 mb-2 flex items-center">
+                                <i class="fas fa-user-lock text-violet-600 mr-2"></i> Control de Accesos
+                            </h3>
+                            <p class="text-gray-600 text-sm">Gestiona permisos de edición o solo lectura.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-xl shadow-lg text-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">¿Listo para transformar tu aula?</h2>
+                    <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
+                        Descubre el poder del aprendizaje visual colaborativo con Miro.
+                    </p>
+                    <a href="https://miro.com/education/" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Comenzar con Miro Education
+                    </a>
+                </section>
+            </div>
+        </div>
+        <ChatBot/>
+    </main>
+    <Footer/>
+</Layout>

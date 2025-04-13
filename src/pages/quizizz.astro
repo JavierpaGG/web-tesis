@@ -1,0 +1,345 @@
+---
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import ChatBot from '../components/ChatBot.astro';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
+<Layout>
+    <Header/>
+    <main class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans py-12 min-h-screen">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+            <!-- Hero Section -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 border border-gray-100">
+                <div class="p-8 sm:p-10 text-center">
+                    <div class="inline-block bg-gradient-to-r from-green-500 to-blue-500 p-4 rounded-full mb-6">
+                        <i class="fas fa-gamepad text-white text-3xl"></i>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
+                        Gamifica tus Clases con <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">Quizizz</span>
+                    </h1>
+                    <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+                        Plataforma interactiva para crear evaluaciones gamificadas que tus estudiantes amarán.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Sections -->
+            <div class="space-y-10">
+                <!-- Introducción -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-question-circle text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">¿Qué es Quizizz?</h2>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Quizizz transforma las evaluaciones tradicionales en juegos interactivos con:
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Competencias amistosas entre estudiantes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Memes personalizados como retroalimentación</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Reportes automáticos de desempeño</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                            <i class="fas fa-chalkboard-teacher text-blue-600 mr-2"></i> Versión para Educadores
+                        </h3>
+                        <p class="text-gray-600 text-sm">Quizizz ofrece <strong>cuentas premium gratuitas</strong> para docentes con funciones avanzadas.</p>
+                    </div>
+                </section>
+
+                <!-- Beneficios Educativos -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-star text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Ventajas Pedagógicas</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-chart-line text-blue-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Evaluación Formativa</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Identifica necesidades de aprendizaje en tiempo real.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-user-friends text-green-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Aprendizaje Social</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Fomenta la competencia saludable entre pares.</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-clock text-yellow-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Flexibilidad Temporal</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Puede usarse en clase o como tarea asincrónica.</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-database text-purple-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Banco de Preguntas</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Acceso a miles de quizzes creados por otros docentes.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Estrategias Didácticas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-teal-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-atom text-teal-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Estrategias con Quizizz</h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                            <h3 class="font-bold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-bolt mr-2"></i> Actividad de Inicio
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Usa Quizizz para:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Evaluar conocimientos previos</li>
+                                <li>Romper el hielo con preguntas divertidas</li>
+                                <li>Generar discusión sobre el tema a tratar</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-green-50 rounded-lg border border-green-100">
+                            <h3 class="font-bold text-green-800 mb-2 flex items-center">
+                                <i class="fas fa-book-open mr-2"></i> Repaso Interactivo
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Ideal para:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Repasar antes de exámenes</li>
+                                <li>Reforzar conceptos clave</li>
+                                <li>Identificar áreas que necesitan más práctica</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-purple-50 rounded-lg border border-purple-100">
+                            <h3 class="font-bold text-purple-800 mb-2 flex items-center">
+                                <i class="fas fa-laptop-code mr-2"></i> Aula Invertida
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Como tarea:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Asignar quizzes como preparación para la clase</li>
+                                <li>Analizar resultados para planificar la sesión</li>
+                                <li>Personalizar el aprendizaje según necesidades</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Creación de Quizzes -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-tools text-indigo-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Creando Quizzes Efectivos</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition">
+                                <i class="fas fa-question text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Tipos de Preguntas</h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Opción múltiple</li>
+                                <li>Verdadero/Falso</li>
+                                <li>Respuesta abierta</li>
+                                <li>Emparejamiento</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition">
+                                <i class="fas fa-image text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Elementos Multimedia</h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Imágenes en preguntas</li>
+                                <li>Videos explicativos</li>
+                                <li>GIFs y memes de retroalimentación</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition">
+                                <i class="fas fa-cogs text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Configuraciones Clave</h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Tiempo por pregunta</li>
+                                <li>Mostrar respuestas correctas</li>
+                                <li>Puntos por velocidad</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-yellow-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-200 transition">
+                                <i class="fas fa-clone text-yellow-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Reutilización</h3>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 text-sm">
+                                <li>Duplicar y modificar quizzes existentes</li>
+                                <li>Importar preguntas de otros quizzes</li>
+                                <li>Usar quizzes de la biblioteca pública</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tutorial Básico -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-play-circle text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Guía Rápida para Docentes</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Crear un quiz</h3>
+                                    <p class="text-gray-600 text-sm">Desde tu panel de docente, selecciona "Crear nuevo quiz"</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-green-600 font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Añadir preguntas</h3>
+                                    <p class="text-gray-600 text-sm">Escribe preguntas y respuestas, añade imágenes si es necesario</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-purple-600 font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Personalizar</h3>
+                                    <p class="text-gray-600 text-sm">Agrega memes, ajusta tiempos y configura los puntos</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-yellow-600 font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Asignar a estudiantes</h3>
+                                    <p class="text-gray-600 text-sm">Comparte el código o enlace para que accedan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-red-600 font-bold">5</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Monitorear en vivo</h3>
+                                    <p class="text-gray-600 text-sm">Observa el progreso de los estudiantes en tiempo real</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-indigo-600 font-bold">6</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Analizar resultados</h3>
+                                    <p class="text-gray-600 text-sm">Revisa reportes detallados del desempeño de la clase</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Consejos Avanzados -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-graduation-cap text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Consejos para el Aula</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <h3 class="font-semibold text-green-800 mb-2 flex items-center">
+                                <i class="fas fa-users text-green-600 mr-2"></i> Equipos vs Individual
+                            </h3>
+                            <p class="text-gray-600 text-sm">Alterna entre competencia individual y por equipos para variedad.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-music text-blue-600 mr-2"></i> Ambiente Musical
+                            </h3>
+                            <p class="text-gray-600 text-sm">Activa la música de fondo para mayor dinamismo.</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                            <h3 class="font-semibold text-purple-800 mb-2 flex items-center">
+                                <i class="fas fa-trophy text-purple-600 mr-2"></i> Reconocimientos
+                            </h3>
+                            <p class="text-gray-600 text-sm">Premia a los mejores con insignias digitales o privilegios en clase.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                            <h3 class="font-semibold text-yellow-800 mb-2 flex items-center">
+                                <i class="fas fa-redo-alt text-yellow-600 mr-2"></i> Repetición Mejorada
+                            </h3>
+                            <p class="text-gray-600 text-sm">Usa el mismo quiz varias veces para medir progreso.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-xl shadow-lg text-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">¿Listo para gamificar tus evaluaciones?</h2>
+                    <p class="text-green-100 mb-6 max-w-2xl mx-auto">
+                        Transforma tus clases con evaluaciones interactivas que tus estudiantes disfrutarán.
+                    </p>
+                    <a href="https://quizizz.com/" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-green-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Comenzar con Quizizz
+                    </a>
+                </section>
+            </div>
+        </div>
+        <ChatBot/>
+    </main>
+    <Footer/>
+</Layout>

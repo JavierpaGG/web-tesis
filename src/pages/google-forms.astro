@@ -1,0 +1,368 @@
+---
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import ChatBot from '../components/ChatBot.astro';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
+<Layout>
+    <Header/>
+    <main class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans py-12 min-h-screen">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+            <!-- Hero Section -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 border border-gray-100">
+                <div class="p-8 sm:p-10 text-center">
+                    <div class="inline-block bg-gradient-to-r from-blue-600 to-green-500 p-4 rounded-full mb-6">
+                        <i class="fas fa-poll text-white text-3xl"></i>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
+                        Crea Formularios con <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">Google Forms</span>
+                    </h1>
+                    <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+                        La herramienta perfecta para recopilar información, realizar evaluaciones y encuestas educativas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Sections -->
+            <div class="space-y-10">
+                <!-- Introducción -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-info-circle text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">¿Por qué Google Forms en educación?</h2>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Google Forms es una solución versátil y gratuita para educadores que permite:
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Crear evaluaciones y cuestionarios automatizados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Recopilar respuestas en tiempo real</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Analizar datos con gráficos automáticos</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                            <i class="fas fa-chalkboard-teacher text-blue-600 mr-2"></i> Google Workspace for Education
+                        </h3>
+                        <p class="text-gray-600 text-sm">Las instituciones educativas pueden acceder a <strong>funcionalidades avanzadas</strong> de Google Forms con cuentas institucionales.</p>
+                    </div>
+                </section>
+
+                <!-- Beneficios Educativos -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-star text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Ventajas para el Aula</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-clock text-blue-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Ahorro de Tiempo</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Corrección automática de exámenes y cuestionarios.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-chart-bar text-green-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Análisis de Datos</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Visualización inmediata de resultados en gráficos.</p>
+                        </div>
+                        <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-link text-teal-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Fácil Compartición</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Envía formularios por enlace o integra en Classroom.</p>
+                        </div>
+                        <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-mobile-alt text-emerald-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Acceso Móvil</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Los estudiantes pueden responder desde cualquier dispositivo.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tipos de Preguntas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-teal-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-question-circle text-teal-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Tipos de Preguntas Disponibles</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition">
+                                <i class="fas fa-check-square text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Opción Múltiple</h3>
+                            <p class="text-gray-600 text-sm">Perfecto para exámenes y cuestionarios con respuestas definidas.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition">
+                                <i class="fas fa-paragraph text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Respuesta Corta/Larga</h3>
+                            <p class="text-gray-600 text-sm">Ideal para preguntas abiertas y reflexiones.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition">
+                                <i class="fas fa-list-ol text-teal-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Escala Lineal</h3>
+                            <p class="text-gray-600 text-sm">Útil para evaluaciones de satisfacción o autoevaluaciones.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-200 transition">
+                                <i class="fas fa-grid-view text-emerald-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Cuadrícula</h3>
+                            <p class="text-gray-600 text-sm">Para matrices de opciones o evaluaciones por criterios.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Usos Educativos -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-emerald-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-lightbulb text-emerald-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Aplicaciones en el Aula</h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                            <h3 class="font-bold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-clipboard-check mr-2"></i> Evaluaciones Formativas
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Usa Google Forms para:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Cuestionarios de verificación de lectura</li>
+                                <li>Pruebas rápidas de comprensión</li>
+                                <li>Autoevaluaciones y coevaluaciones</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-green-50 rounded-lg border border-green-100">
+                            <h3 class="font-bold text-green-800 mb-2 flex items-center">
+                                <i class="fas fa-users mr-2"></i> Encuestas Estudiantiles
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Recopila información sobre:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Intereses y estilos de aprendizaje</li>
+                                <li>Satisfacción con actividades</li>
+                                <li>Retroalimentación sobre clases</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-teal-50 rounded-lg border border-teal-100">
+                            <h3 class="font-bold text-teal-800 mb-2 flex items-center">
+                                <i class="fas fa-project-diagram mr-2"></i> Investigación
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-2">Implementa:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Encuestas para proyectos de clase</li>
+                                <li>Recolección de datos para análisis</li>
+                                <li>Estudios estadísticos básicos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Funciones Avanzadas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-magic text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Funcionalidades Avanzadas</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-brain text-blue-600 mr-2"></i> Banco de Preguntas
+                            </h3>
+                            <p class="text-gray-600 text-sm">Crea cuestionarios con preguntas aleatorizadas.</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <h3 class="font-semibold text-green-800 mb-2 flex items-center">
+                                <i class="fas fa-video text-green-600 mr-2"></i> Multimedia
+                            </h3>
+                            <p class="text-gray-600 text-sm">Incorpora imágenes y videos en tus preguntas.</p>
+                        </div>
+                        
+                        <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
+                            <h3 class="font-semibold text-teal-800 mb-2 flex items-center">
+                                <i class="fas fa-branch text-teal-600 mr-2"></i> Lógica Condicional
+                            </h3>
+                            <p class="text-gray-600 text-sm">Personaliza el flujo según las respuestas.</p>
+                        </div>
+                        
+                        <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                            <h3 class="font-semibold text-emerald-800 mb-2 flex items-center">
+                                <i class="fas fa-file-export text-emerald-600 mr-2"></i> Exportación
+                            </h3>
+                            <p class="text-gray-600 text-sm">Descarga respuestas a hojas de cálculo para análisis avanzado.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tutorial Básico -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-play-circle text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Guía de Inicio Rápido</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Accede a Google Forms</h3>
+                                    <p class="text-gray-600 text-sm">Ve a forms.google.com o desde Google Drive.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-green-600 font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Elige una plantilla</h3>
+                                    <p class="text-gray-600 text-sm">O comienza con un formulario en blanco.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-teal-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-teal-600 font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Añade preguntas</h3>
+                                    <p class="text-gray-600 text-sm">Selecciona los tipos de pregunta adecuados.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-emerald-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-emerald-600 font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Personaliza el diseño</h3>
+                                    <p class="text-gray-600 text-sm">Cambia colores, añade imágenes o tu logo.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold">5</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Configura opciones</h3>
+                                    <p class="text-gray-600 text-sm">Establece límites de tiempo, recopilación de emails, etc.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                                    <span class="text-green-600 font-bold">6</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Comparte el formulario</h3>
+                                    <p class="text-gray-600 text-sm">Envía por enlace, email o integra en Classroom.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Consejos para Docentes -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-teal-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-chalkboard-teacher text-teal-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Consejos para Docentes</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-stopwatch text-blue-600 mr-2"></i> Límites de Tiempo
+                            </h3>
+                            <p class="text-gray-600 text-sm">Activa temporizadores para evaluaciones cronometradas.</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <h3 class="font-semibold text-green-800 mb-2 flex items-center">
+                                <i class="fas fa-check-double text-green-600 mr-2"></i> Claves de Respuesta
+                            </h3>
+                            <p class="text-gray-600 text-sm">Predefine respuestas correctas para corrección automática.</p>
+                        </div>
+                        
+                        <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
+                            <h3 class="font-semibold text-teal-800 mb-2 flex items-center">
+                                <i class="fas fa-eye-slash text-teal-600 mr-2"></i> Modo Cuiz
+                            </h3>
+                            <p class="text-gray-600 text-sm">Evita que los estudiantes vean respuestas correctas hasta después.</p>
+                        </div>
+                        
+                        <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                            <h3 class="font-semibold text-emerald-800 mb-2 flex items-center">
+                                <i class="fas fa-random text-emerald-600 mr-2"></i> Orden Aleatorio
+                            </h3>
+                            <p class="text-gray-600 text-sm">Mezcla el orden de preguntas y opciones.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="bg-gradient-to-r from-blue-600 to-green-500 p-8 rounded-xl shadow-lg text-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">¿Listo para crear tu primer formulario educativo?</h2>
+                    <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
+                        Empieza a usar Google Forms hoy mismo y descubre una nueva forma de evaluar y recopilar información.
+                    </p>
+                    <a href="https://docs.google.com/forms" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+                        <i class="fab fa-google mr-2"></i>
+                        Crear un Formulario Ahora
+                    </a>
+                </section>
+            </div>
+        </div>
+        <ChatBot/>
+    </main>
+    <Footer/>
+</Layout>

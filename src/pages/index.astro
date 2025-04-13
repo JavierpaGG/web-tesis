@@ -1,76 +1,391 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import "../styles/global.css"
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import ChatBot from '../components/ChatBot.astro';
-
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ChatBot from "../components/ChatBot.astro";
+import Carousel from "../components/Carousel.astro";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 ---
 
 <Layout>
-<!-- Cabecera -->
-<Header/>
+  <!-- Cabecera Mejorada -->
+  <Header />
 
-<body class="bg-gray-100 text-gray-800">
-	<!-- Sección de Bienvenida -->
-	<div class="bg-violet-800 text-white py-30">
-	  <div class="container mx-auto text-center">
-		<h1 class="text-5xl font-bold mb-4">Bienvenido a la Plataforma Web</h1>
-		<p class="text-xl mb-8">Una solución moderna para tus necesidades digitales.</p>
-		<a href="#herramientas" class="bg-white text-neutral-950 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300">
-		  Explorar Más
-		</a>
-	  </div>
-	</div>
+  <!-- Hero Section con enfoque docente -->
+  <section
+    class="relative bg-gradient-to-r from-indigo-900 to-purple-800 text-white py-32 md:py-40 overflow-hidden"
+  >
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-black opacity-30"></div>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gray-900 to-transparent"
+      >
+      </div>
+    </div>
 
- <div class="mb-5"></div>
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Plataforma Docente <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500"
+          >San Luis Gonzaga</span
+        >
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+        Herramientas digitales integradas para potenciar tu labor educativa
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="#herramientas"
+          class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-full font-bold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+          <i class="fas fa-tools mr-2"></i> Explorar Recursos
+        </a>
+        <a
+          href="#asistente"
+          class="bg-white text-indigo-800 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          <i class="fas fa-robot mr-2"></i> Conocer Asistente
+        </a>
+      </div>
+    </div>
+  </section>
 
-	<!--Herramientas tecnológicas-->
-	<section id="herramientas" class="py-16">
-	  <div class="container mx-auto px-4">
-		<h2 class="text-3xl font-bold text-center mb-12">Conoce las herramientas tecnol&oacute;gicas</h2>
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-		  <!-- Herramienta 1 -->
-		  <a href="/canva">
-		  <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-			<div class="text-3xl mb-4">Canva</div>
-			<div class="card-imagen">
-			<img src="canva.jpg" alt="Logo de Canva" class="imagen-home ">
-			</div>
-			<h3 class="text-xl font-bold mb-4">Diseño</h3>
-			<p class="text-gray-600">Ideal para crear recursos visuales atractivos, como infografías y presentaciones interactivas.</p>
-		  </div>
-		</a>
-		  <!-- Herramienta 2 -->
-		   <a href="/kahoot">
-		  <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-			<div class="text-3xl mb-4">Kahoot!</div>
-			<div class="card-imagen">
-			<img src="kahoot.jpg" alt="Logo de Kahoot!" class="imagen-home ">
-			</div>
-			<h3 class="text-xl font-bold mb-4">Cuestionario</h3>
-			<p class="text-gray-600">Te permite crear cuestionarios y actividades interactivas para cualquier materia.</p>
-		  </div>
-		</a>
-		  <!-- Herramienta 3 -->
-		<a href="/teams">
-		  <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-			<div class="text-3xl mb-4">Microsoft Teams</div>
-			<div class="card-imagen">
-			<img src="teams.png" alt="Logo de Microsoft Teams" class="imagen-home ">
-			</div>
-			<h3 class="text-xl font-bold mb-4">Reunion</h3>
-			<p class="text-gray-600">Ideal para clases virtuales, reuniones y colaboración en grupo.</p>
-		  </div>
-		</a>
-	</section>
+  <!-- Sección de Bienvenida para docentes -->
+  <section class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <div class="relative">
+            <div
+              class="absolute -top-6 -left-6 w-full h-full border-2 border-yellow-400 rounded-xl"
+            >
+            </div>
+            <img
+              src="/carrusel-f1.jpg"
+              alt="Docentes del Colegio San Luis Gonzaga"
+              class="relative rounded-xl shadow-2xl w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <h2 class="text-4xl font-bold text-gray-800 mb-6">
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"
+              >Bienvenido Docente</span
+            > a tu espacio digital
+          </h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            Hemos desarrollado este sistema web pensando en facilitar y
+            enriquecer tu trabajo diario en el aula. Accede a herramientas
+            diseñadas específicamente para la planificación, ejecución y
+            evaluación de tus clases.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+              <span class="text-gray-700"
+                >Asistente virtual para consultas inmediatas</span
+              >
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+              <span class="text-gray-700"
+                >Plantillas y recursos didácticos</span
+              >
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+              <span class="text-gray-700"
+                >Aprende sobre herramientas tecnológicas</span
+              >
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800 border-b border-indigo-600 pb-1"
+          >
+            Ver tutorial de uso <i class="fas fa-play-circle ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Chatbot -->
-<ChatBot/>
-</div>
+  <!-- Sección Asistente Virtual -->
+<section id="asistente" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="text-yellow-500 font-bold tracking-wider">ASISTENCIA INMEDIATA</span>
+      <h2 class="text-4xl font-bold text-gray-800 mt-2">
+        Tu <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Asistente Educativo</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
+        Resuelve dudas, genera ideas para clases y accede a recursos con nuestro asistente inteligente
+      </p>
+    </div>
 
-	<!-- Pie de Página -->
-	<Footer/>
-  </body>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="bg-indigo-50 rounded-xl p-8 border border-indigo-100 shadow-sm">
+          <h3 class="text-2xl font-bold text-indigo-800 mb-4 flex items-center">
+            <i class="fas fa-robot text-yellow-500 mr-3"></i> ¿Cómo puede ayudarte?
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                <i class="fas fa-question text-indigo-600"></i>
+              </div>
+              <span class="text-gray-700">Resuelve dudas sobre plataformas educativas</span>
+            </li>
+            <li class="flex items-start">
+              <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                <i class="fas fa-lightbulb text-indigo-600"></i>
+              </div>
+              <span class="text-gray-700">Genera ideas innovadoras para tus clases</span>
+            </li>
+            <li class="flex items-start">
+              <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                <i class="fas fa-chart-line text-indigo-600"></i>
+              </div>
+              <span class="text-gray-700">Analiza resultados académicos</span>
+            </li>
+            <li class="flex items-start">
+              <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                <i class="fas fa-book-open text-indigo-600"></i>
+              </div>
+              <span class="text-gray-700">Recomienda recursos pedagógicos</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="mt-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white shadow-lg">
+          <h4 class="font-bold text-lg mb-2 flex items-center">
+            <i class="fas fa-magic text-yellow-300 mr-2"></i> Ejemplos para probar
+          </h4>
+          <ul class="list-disc list-inside space-y-1 pl-4 opacity-90">
+            <li>"Ideas para clase sobre la Revolución Francesa"</li>
+            <li>"Cómo evaluar comprensión lectora en primaria"</li>
+            <li>"Recursos multimedia para enseñar matemáticas"</li>
+          </ul>
+        </div>
+      </div>
 
+      <!-- Sección de Activación del Asistente -->
+      <div class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+        <div class="text-center">
+          <div class="bg-indigo-100 p-4 rounded-full inline-block mb-4">
+            <i class="fas fa-comments text-indigo-600 text-4xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Asistente Virtual Docente</h3>
+          <p class="text-gray-600 mb-6">Disponible 24/7 para apoyar tu labor educativa</p>
+          
+          <button 
+            id="activate-chatbot" 
+            class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold hover:from-indigo-700 hover:to-purple-700 transition duration-300 shadow-lg hover:shadow-xl flex items-center mx-auto"
+            onclick="openChatAssistant()"
+          >
+            <i class="fas fa-comment-dots mr-3 text-lg"></i> Activar Asistente
+          </button>
+          
+          <p class="text-sm text-gray-500 mt-4">
+            <i class="fas fa-info-circle text-indigo-500 mr-1"></i> También disponible en la esquina inferior derecha
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Script para la integración -->
+<script is:inline>
+  // Función global para abrir el chat
+  function openChatAssistant() {
+    const chatBox = document.getElementById('chat-box');
+    const chatInput = document.getElementById('chat-input');
+    
+    if (chatBox && chatInput) {
+      chatBox.classList.remove('hidden');
+      chatInput.focus();
+      
+      // Desplazamiento suave al chat si es necesario
+      chatBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      // Mostrar mensaje especial para docentes
+      const welcomeMsg = document.getElementById('welcome-message');
+      if (welcomeMsg) {
+        welcomeMsg.innerHTML = `
+          <div class="bg-indigo-100 p-3 rounded-full mb-3">
+            <i class="fas fa-chalkboard-teacher text-indigo-600 text-2xl"></i>
+          </div>
+          <h4 class="font-medium text-gray-700">¡Hola Docente!</h4>
+          <p class="text-sm mt-1 mb-4">Estoy aquí para ayudarte con:</p>
+          <div class="grid grid-cols-2 gap-2 text-left w-full px-4">
+            <button onclick="setQuestion(this)" class="suggested-question bg-white text-indigo-700 p-2 rounded-lg border border-indigo-200 text-xs hover:bg-indigo-50">
+              Planificación de clases
+            </button>
+            <button onclick="setQuestion(this)" class="suggested-question bg-white text-indigo-700 p-2 rounded-lg border border-indigo-200 text-xs hover:bg-indigo-50">
+              Estrategias de evaluación
+            </button>
+            <button onclick="setQuestion(this)" class="suggested-question bg-white text-indigo-700 p-2 rounded-lg border border-indigo-200 text-xs hover:bg-indigo-50">
+              Recursos digitales
+            </button>
+            <button onclick="setQuestion(this)" class="suggested-question bg-white text-indigo-700 p-2 rounded-lg border border-indigo-200 text-xs hover:bg-indigo-50">
+              Gestión del aula
+            </button>
+          </div>
+        `;
+      }
+    }
+  }
+
+  // Función para establecer preguntas sugeridas
+  function setQuestion(element) {
+    const chatInput = document.getElementById('chat-input');
+    if (chatInput) {
+      chatInput.value = element.textContent.trim();
+      chatInput.focus();
+    }
+  }
+</script>
+
+<style>
+  .suggested-question {
+    transition: all 0.2s ease;
+  }
+  .suggested-question:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.1);
+  }
+</style>
+
+  <!-- Sección Herramientas Docentes -->
+<section id="herramientas" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <span class="text-yellow-500 font-bold tracking-wider uppercase text-sm">HERRAMIENTAS DOCENTES</span>
+      <h2 class="text-4xl font-bold text-gray-800 mt-3">
+        Recursos <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Digitales</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
+        Plataformas especialmente seleccionadas para transformar tu práctica educativa
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Herramienta 1 - Canva -->
+      <a href="/canva" class="group relative block">
+        <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
+        <div class="relative bg-white rounded-xl shadow-xl h-full overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col">
+          <div class="h-48 bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center">
+            <div class="bg-white/20 p-6 rounded-full">
+              <i class="fas fa-palette text-white text-5xl"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex items-center mb-4">
+              <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Diseño</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Canva para Educación</h3>
+            <p class="text-gray-600 mb-6">
+              Crea materiales visuales profesionales, presentaciones interactivas y recursos didácticos impactantes.
+            </p>
+            <div class="mt-auto flex items-center text-indigo-600 font-semibold group-hover:text-indigo-800 transition">
+              Explorar herramienta
+              <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Herramienta 2 - Kahoot -->
+      <a href="/kahoot" class="group relative block">
+        <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-blue-500 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
+        <div class="relative bg-white rounded-xl shadow-xl h-full overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col">
+          <div class="h-48 bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center">
+            <div class="bg-white/20 p-6 rounded-full">
+              <i class="fas fa-gamepad text-white text-5xl"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex items-center mb-4">
+              <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Gamificación</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Kahoot! Premium</h3>
+            <p class="text-gray-600 mb-6">
+              Convierte tus evaluaciones en juegos interactivos que motivan a tus estudiantes y miden su aprendizaje.
+            </p>
+            <div class="mt-auto flex items-center text-indigo-600 font-semibold group-hover:text-indigo-800 transition">
+              Explorar herramienta
+              <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Herramienta 3 - Teams -->
+      <a href="/microsoft-teams" class="group relative block">
+        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
+        <div class="relative bg-white rounded-xl shadow-xl h-full overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col">
+          <div class="h-48 bg-gradient-to-r from-blue-500 to-indigo-400 flex items-center justify-center">
+            <div class="bg-white/20 p-6 rounded-full">
+              <i class="fab fa-microsoft text-white text-5xl"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex items-center mb-4">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Colaboración</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Microsoft Teams</h3>
+            <p class="text-gray-600 mb-6">
+              Organiza clases virtuales, comparte recursos y mantén la comunicación con estudiantes y colegas.
+            </p>
+            <div class="mt-auto flex items-center text-indigo-600 font-semibold group-hover:text-indigo-800 transition">
+              Explorar herramienta
+              <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Botón para ver más herramientas -->
+    <div class="text-center mt-16">
+      <a href="/herramientas" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300">
+        <i class="fas fa-th mr-2"></i> Ver todas las herramientas
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Estilo para el icono de Canva (si no está disponible en Font Awesome) */
+  .fa-canva:before {
+    content: "C";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+</style>
+
+  <!-- Sección Comunidad Docente -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <span class="text-yellow-500 font-bold tracking-wider"
+          >COMUNIDAD DOCENTE</span
+        >
+        <h2 class="text-4xl font-bold text-gray-800 mt-2">
+          Experiencias <span class="text-indigo-600">Compartidas</span>
+        </h2>
+      </div>
+      <Carousel />
+    </div>
+  </section>
+
+  <!-- Chatbot -->
+  <ChatBot />
+
+  <!-- Pie de Página Premium -->
+  <Footer />
 </Layout>

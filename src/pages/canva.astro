@@ -4,59 +4,305 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Layout from "../layouts/Layout.astro";
 import ChatBot from '../components/ChatBot.astro';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 ---
 
 <Layout>
     <Header/>
-    <main class="bg-gray-100 font-sans py-10">
-        <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-xl">
-            <h1 class="text-4xl font-bold text-blue-700 text-center">📌 Guía Completa para Docentes: Uso de Canva</h1>
-            <p class="text-gray-600 text-center mt-2 text-lg">Canva es una plataforma de diseño gráfico fácil de usar. Permite crear contenido visual de calidad sin conocimientos avanzados en diseño.</p>
-
-            <h2 class="text-3xl font-semibold text-gray-800 mt-6">🎨 ¿Qué es Canva?</h2>
-            <p class="text-gray-700 mt-2">Canva es una herramienta en línea que permite diseñar presentaciones, infografías, publicaciones para redes sociales y documentos profesionales. Es intuitivo y ofrece miles de plantillas gratuitas para facilitar el proceso de creación.</p>
-
-            <h2 class="text-3xl font-semibold text-gray-800 mt-6">📖 Beneficios de Usar Canva en la Docencia</h2>
-            <ul class="list-disc list-inside text-gray-700 mt-3 text-lg">
-                <li>✔️ Ahorro de tiempo con plantillas prediseñadas.</li>
-                <li>✔️ Fácil personalización de contenido visual.</li>
-                <li>✔️ Acceso gratuito con múltiples recursos.</li>
-                <li>✔️ Ideal para material didáctico interactivo.</li>
-            </ul>
-
-            <h2 class="text-3xl font-semibold text-gray-800 mt-6">🛠️ Herramientas Clave de Canva</h2>
-            <p class="text-gray-700 mt-2">Canva cuenta con diversas herramientas que pueden potenciar el trabajo de los docentes:</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                <div class="p-4 bg-gray-200 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-blue-700">🎭 Plantillas Personalizables</h3>
-                    <p class="text-gray-600">Miles de diseños listos para adaptar a tus necesidades educativas.</p>
-                </div>
-                <div class="p-4 bg-gray-200 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-blue-700">🖼️ Biblioteca de Imágenes</h3>
-                    <p class="text-gray-600">Acceso a una amplia colección de fotos e ilustraciones gratuitas.</p>
-                </div>
-                <div class="p-4 bg-gray-200 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-blue-700">🔠 Fuentes y Tipografías</h3>
-                    <p class="text-gray-600">Variedad de estilos para mejorar la presentación de tus textos.</p>
-                </div>
-                <div class="p-4 bg-gray-200 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-blue-700">🎥 Creación de Videos</h3>
-                    <p class="text-gray-600">Opciones para editar y diseñar presentaciones animadas.</p>
+    <main class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans py-12 min-h-screen">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+            <!-- Hero Section -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 border border-gray-100">
+                <div class="p-8 sm:p-10 text-center">
+                    <div class="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 p-4 rounded-full mb-6">
+                        <i class="fas fa-palette text-white text-3xl"></i>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
+                        Diseña como un profesional con <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Canva</span>
+                    </h1>
+                    <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+                        La plataforma de diseño gráfico que hace que crear contenido impactante sea fácil para todos.
+                    </p>
                 </div>
             </div>
 
-            <h2 class="text-3xl font-semibold text-gray-800 mt-6">📌 Ejemplo de Diseño en Canva</h2>
-            <div class="flex justify-center mt-4">
-                <img class="rounded-lg shadow-md w-full md:w-2/3" src="/ejemplo-canva.webp" alt="Ejemplo de diseño en Canva">
-            </div>
+            <!-- Content Sections -->
+            <div class="space-y-10">
+                <!-- Introducción -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-cyan-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-magic text-cyan-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">¿Por qué Canva en educación?</h2>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Canva democratiza el diseño gráfico permitiendo:
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Crear presentaciones, infografías y materiales visuales profesionales</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Trabajar colaborativamente en tiempo real</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Acceder a miles de plantillas educativas gratuitas</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 bg-cyan-50 p-4 rounded-lg border border-cyan-100">
+                        <h3 class="font-semibold text-cyan-800 mb-2 flex items-center">
+                            <i class="fas fa-graduation-cap text-cyan-600 mr-2"></i> Canva para Educación
+                        </h3>
+                        <p class="text-gray-600 text-sm">Profesores y estudiantes verificados pueden acceder a <strong>Canva Pro gratuitamente</strong> con funciones premium.</p>
+                    </div>
+                </section>
 
-            <h2 class="text-2xl font-semibold text-gray-800 mt-6">🔗 Recursos adicionales</h2>
-        <p class="text-gray-700 mt-2 text-center">Accede a Canva desde su sitio web oficial:</p>
-        <div class="text-center mt-4">
-            <a class="px-5 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition" href="https://www.canva.com/" target="_blank">Ir a Canva</a>
+                <!-- Herramientas Principales -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-tools text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Herramientas Creativas</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-cyan-50 p-4 rounded-lg border border-cyan-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-sliders-h text-cyan-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Editor Intuitivo</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Arrastra y suelta elementos para crear diseños en minutos.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-images text-blue-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Biblioteca Multimedia</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Millones de fotos, ilustraciones e iconos libres de derechos.</p>
+                        </div>
+                        <div class="bg-sky-50 p-4 rounded-lg border border-sky-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-font text-sky-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Tipografía Creativa</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Cientos de fuentes y efectos de texto profesionales.</p>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-users text-indigo-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Colaboración en Tiempo Real</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Trabaja en equipo como en Google Docs.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Plantillas Educativas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-sky-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-clone text-sky-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Plantillas para el Aula</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="group bg-white p-4 rounded-lg border border-gray-200 hover:border-cyan-300 hover:shadow-md transition">
+                            <i class="fas fa-chalkboard text-cyan-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Presentaciones</p>
+                        </div>
+                        <div class="group bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition">
+                            <i class="fas fa-infinity text-blue-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Infografías</p>
+                        </div>
+                        <div class="group bg-white p-4 rounded-lg border border-gray-200 hover:border-sky-300 hover:shadow-md transition">
+                            <i class="fas fa-certificate text-sky-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Certificados</p>
+                        </div>
+                        <div class="group bg-white p-4 rounded-lg border border-gray-200 hover:border-indigo-300 hover:shadow-md transition">
+                            <i class="fas fa-calendar-alt text-indigo-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Calendarios</p>
+                        </div>
+                        <div class="group bg-white p-4 rounded-lg border border-gray-200 hover:border-cyan-300 hover:shadow-md transition">
+                            <i class="fas fa-book-open text-cyan-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Portadas</p>
+                        </div>
+                        <div class="group bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition">
+                            <i class="fas fa-chart-pie text-blue-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Gráficos</p>
+                        </div>
+                        <div class="group bg-white p-4 rounded-lg border border-gray-200 hover:border-sky-300 hover:shadow-md transition">
+                            <i class="fas fa-video text-sky-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Videos</p>
+                        </div>
+                        <div class="group bg-white p-4 rounded-lg border border-gray-200 hover:border-indigo-300 hover:shadow-md transition">
+                            <i class="fas fa-puzzle-piece text-indigo-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Actividades</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Usos Educativos -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-chalkboard-teacher text-indigo-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Aplicaciones Educativas</h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-cyan-50 rounded-lg border border-cyan-100">
+                            <h3 class="font-bold text-cyan-800 mb-2 flex items-center">
+                                <i class="fas fa-user-tie mr-2"></i> Para Profesores
+                            </h3>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Crear materiales de clase visualmente atractivos</li>
+                                <li>Diseñar presentaciones interactivas</li>
+                                <li>Elaborar infografías para explicar conceptos complejos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                            <h3 class="font-bold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-user-graduate mr-2"></i> Para Estudiantes
+                            </h3>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Realizar proyectos creativos</li>
+                                <li>Preparar presentaciones académicas</li>
+                                <li>Desarrollar portafolios digitales</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-4 bg-sky-50 rounded-lg border border-sky-100">
+                            <h3 class="font-bold text-sky-800 mb-2 flex items-center">
+                                <i class="fas fa-school mr-2"></i> Para Instituciones
+                            </h3>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Crear materiales de marketing educativo</li>
+                                <li>Diseñar boletines y comunicaciones</li>
+                                <li>Producir contenido para redes sociales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Características Pro -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-crown text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Ventajas de Canva Pro para Educación</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-cyan-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-200 transition">
+                                <i class="fas fa-folder-plus text-cyan-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Brand Kit</h3>
+                            <p class="text-gray-600 text-sm">Guarda los colores, logos y fuentes de tu institución para mantener consistencia en todos los diseños.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition">
+                                <i class="fas fa-magic text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Efectos Mágicos</h3>
+                            <p class="text-gray-600 text-sm">Herramientas avanzadas como eliminación de fondos y animaciones.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-sky-200 transition">
+                                <i class="fas fa-cloud-upload-alt text-sky-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Almacenamiento Ilimitado</h3>
+                            <p class="text-gray-600 text-sm">Guarda todos tus diseños educativos sin preocuparte por el espacio.</p>
+                        </div>
+                        
+                        <div class="group p-6 bg-white border border-gray-200 rounded-lg hover:border-indigo-300 hover:shadow-lg transition-all">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition">
+                                <i class="fas fa-users-cog text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Equipos Educativos</h3>
+                            <p class="text-gray-600 text-sm">Colabora con hasta 50 personas en tu departamento o institución.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tutorial Rápido -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-sky-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-rocket text-sky-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Comienza en 5 minutos</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center mb-2">
+                                <span class="text-cyan-600 font-bold">1</span>
+                            </div>
+                            <p class="text-xs font-medium">Regístrate</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                                <span class="text-blue-600 font-bold">2</span>
+                            </div>
+                            <p class="text-xs font-medium">Elige plantilla</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center mb-2">
+                                <span class="text-sky-600 font-bold">3</span>
+                            </div>
+                            <p class="text-xs font-medium">Personaliza</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mb-2">
+                                <span class="text-indigo-600 font-bold">4</span>
+                            </div>
+                            <p class="text-xs font-medium">Añade contenido</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-2">
+                                <span class="text-purple-600 font-bold">5</span>
+                            </div>
+                            <p class="text-xs font-medium">Descarga/Comparte</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-gradient-to-r from-cyan-100 to-blue-100 p-6 rounded-xl border border-cyan-200">
+                        <h3 class="font-semibold text-gray-800 mb-3">Consejo Pro:</h3>
+                        <p class="text-gray-600 text-sm">Usa el atajo <span class="bg-white px-2 py-1 rounded-md text-sm font-mono">/</span> para acceder rápidamente a elementos, fotos o herramientas mientras diseñas.</p>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="bg-gradient-to-r from-cyan-400 to-blue-500 p-8 rounded-xl shadow-lg text-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">Libera tu creatividad con Canva</h2>
+                    <p class="text-cyan-100 mb-6 max-w-2xl mx-auto">
+                        Únete a los más de 60 millones de usuarios que ya diseñan como profesionales sin necesidad de experiencia.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="https://www.canva.com/education/" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-cyan-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            Canva para Educación
+                        </a>
+                        <a href="https://www.canva.com/" target="_blank" class="inline-flex items-center px-6 py-3 bg-black text-white font-semibold rounded-lg shadow-md hover:bg-gray-800 transition duration-300">
+                            <i class="fas fa-palette mr-2"></i>
+                            Probar Canva Gratis
+                        </a>
+                    </div>
+                </section>
+            </div>
         </div>
-        <ChatBot></ChatBot>
-        </div>
+        <ChatBot/>
     </main>
     <Footer/>
 </Layout>

@@ -1,0 +1,409 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ChatBot from "../components/ChatBot.astro";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+---
+
+<Layout>
+  <!-- Cabecera -->
+  <Header />
+
+  <!-- Hero Section para herramientas docentes -->
+  <section class="relative bg-gradient-to-r from-indigo-900 to-purple-800 text-white py-28 md:py-36 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-black opacity-30"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gray-900 to-transparent"></div>
+    </div>
+
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Herramientas <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">Docentes</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+        Plataformas digitales para potenciar tu práctica educativa
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="#categorias" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-6 py-3 rounded-full font-bold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl">
+          <i class="fas fa-list-ul mr-2"></i> Explorar Categorías
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de categorías -->
+  <section id="categorias" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <span class="text-yellow-500 font-bold tracking-wider uppercase text-sm">EXPLORA POR ÁREA</span>
+        <h2 class="text-4xl font-bold text-gray-800 mt-3">
+          Recursos <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Digitales</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
+          Selecciona la categoría que mejor se adapte a tus necesidades educativas
+        </p>
+      </div>
+
+      <!-- Navegación por categorías -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <a href="#diseno" class="category-card bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl text-center hover:shadow-md transition-all">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-palette text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800">Diseño</h3>
+          <p class="text-sm text-gray-600 mt-1">Recursos visuales</p>
+        </a>
+        
+        <a href="#gamificacion" class="category-card bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl text-center hover:shadow-md transition-all">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-gamepad text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800">Gamificación</h3>
+          <p class="text-sm text-gray-600 mt-1">Aprendizaje lúdico</p>
+        </a>
+        
+        <a href="#colaboracion" class="category-card bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl text-center hover:shadow-md transition-all">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-users text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800">Colaboración</h3>
+          <p class="text-sm text-gray-600 mt-1">Trabajo en equipo</p>
+        </a>
+        
+        <a href="#evaluacion" class="category-card bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl text-center hover:shadow-md transition-all">
+          <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-clipboard-check text-red-600 text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800">Evaluación</h3>
+          <p class="text-sm text-gray-600 mt-1">Seguimiento académico</p>
+        </a>
+      </div>
+
+      <!-- Sección de herramientas por categoría -->
+      <div id="diseno" class="mb-20">
+        <div class="flex items-center mb-8">
+          <div class="bg-purple-100 p-3 rounded-full mr-4">
+            <i class="fas fa-palette text-purple-600 text-xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-800">Herramientas de <span class="text-purple-600">Diseño</span></h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Canva -->
+          <a href="/canva" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-palette text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded-full">Diseño</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Canva</h4>
+              <p class="text-gray-600 mb-4 text-sm">Crea presentaciones, infografías y materiales visuales profesionales con plantillas educativas.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Google Slides -->
+          <a href="/google-slides" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fab fa-google text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded-full">Diseño</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Google Slides</h4>
+              <p class="text-gray-600 mb-4 text-sm">Presentaciones colaborativas con acceso desde cualquier dispositivo.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Prezi -->
+          <a href="/prezi" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-project-diagram text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded-full">Diseño</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Prezi</h4>
+              <p class="text-gray-600 mb-4 text-sm">Crea presentaciones dinámicas y no lineales con efectos visuales impactantes.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gamificación -->
+      <div id="gamificacion" class="mb-20">
+        <div class="flex items-center mb-8">
+          <div class="bg-green-100 p-3 rounded-full mr-4">
+            <i class="fas fa-gamepad text-green-600 text-xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-800">Herramientas de <span class="text-green-600">Gamificación</span></h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Kahoot -->
+          <a href="/kahoot" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-gamepad text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">Gamificación</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Kahoot!</h4>
+              <p class="text-gray-600 mb-4 text-sm">Crea cuestionarios interactivos y juegos educativos que motivan a tus estudiantes.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Quizizz -->
+          <a href="/quizizz" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-blue-500 to-teal-400 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-question-circle text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">Gamificación</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Quizizz</h4>
+              <p class="text-gray-600 mb-4 text-sm">Evaluaciones gamificadas con memes personalizados y reportes de desempeño.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Wordwall -->
+          <a href="/wordwall" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-yellow-500 to-orange-400 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-puzzle-piece text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">Gamificación</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Wordwall</h4>
+              <p class="text-gray-600 mb-4 text-sm">Crea actividades interactivas como crucigramas, sopas de letras y más.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Colaboración -->
+      <div id="colaboracion" class="mb-20">
+        <div class="flex items-center mb-8">
+          <div class="bg-blue-100 p-3 rounded-full mr-4">
+            <i class="fas fa-users text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-800">Herramientas de <span class="text-blue-600">Colaboración</span></h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Microsoft Teams -->
+          <a href="/microsoft-teams" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-blue-500 to-indigo-400 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fab fa-microsoft text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">Colaboración</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Microsoft Teams</h4>
+              <p class="text-gray-600 mb-4 text-sm">Plataforma todo-en-uno para clases virtuales, reuniones y trabajo colaborativo.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Miro -->
+          <a href="/miro" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-chalkboard text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">Colaboración</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Miro</h4>
+              <p class="text-gray-600 mb-4 text-sm">Pizarras virtuales colaborativas para brainstorming y trabajo en equipo.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Slack -->
+          <a href="/slack" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fab fa-slack text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">Colaboración</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Slack</h4>
+              <p class="text-gray-600 mb-4 text-sm">Comunicación en equipo organizada por canales temáticos.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Evaluación -->
+      <div id="evaluacion">
+        <div class="flex items-center mb-8">
+          <div class="bg-red-100 p-3 rounded-full mr-4">
+            <i class="fas fa-clipboard-check text-red-600 text-xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-800">Herramientas de <span class="text-red-600">Evaluación</span></h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Google Forms -->
+          <a href="/google-forms" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-blue-400 to-cyan-400 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-poll text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full">Evaluación</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Google Forms</h4>
+              <p class="text-gray-600 mb-4 text-sm">Crea evaluaciones, encuestas y cuestionarios con corrección automática.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Quizlet -->
+          <a href="/quizlet" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-green-500 to-teal-400 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-flashcards text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full">Evaluación</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Quizlet</h4>
+              <p class="text-gray-600 mb-4 text-sm">Crea flashcards digitales y juegos de aprendizaje para evaluar conocimientos.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Edpuzzle -->
+          <a href="/edpuzzle" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+            <div class="h-48 bg-gradient-to-r from-purple-400 to-indigo-400 flex items-center justify-center">
+              <div class="bg-white/20 p-5 rounded-full group-hover:scale-110 transition-transform">
+                <i class="fas fa-video text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full">Evaluación</span>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Edpuzzle</h4>
+              <p class="text-gray-600 mb-4 text-sm">Evalúa comprensión con videos interactivos que incluyen preguntas.</p>
+              <div class="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition">
+                Explorar herramienta
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-16 bg-gradient-to-r from-indigo-700 to-purple-700 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-4">¿Necesitas ayuda para elegir la herramienta adecuada?</h3>
+      <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">Nuestro asistente virtual puede recomendarte la mejor opción según tus necesidades específicas.</p>
+      <button 
+        id="activate-chatbot" 
+        onclick="openChatAssistant()" 
+        class="bg-white text-indigo-800 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+      >
+        <i class="fas fa-robot mr-2"></i> Consultar con el Asistente
+      </button>
+    </div>
+  </section>
+
+  <!-- Chatbot -->
+  <ChatBot />
+
+  <!-- Pie de Página -->
+  <Footer />
+</Layout>
+
+<style>
+  .category-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .category-card {
+    transition: all 0.3s ease;
+  }
+  
+  .fa-flashcards:before {
+    content: "🗂";
+    font-style: normal;
+  }
+</style>

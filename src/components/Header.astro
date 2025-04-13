@@ -1,25 +1,32 @@
 ---
 import "../styles/global.css"
 ---
-	<header class="bg-violet-900 text-white py-4 shadow-lg">
-		<div class="container mx-auto flex justify-between items-center px-4">
 
-		  <div class="flex items-center justify-start">
-			<img src="logo-colegio.png" alt="" class="imagen-header">
-			<p class="text-2xl font-bold ml-4">San Luis Gonzaga</p>
-		  </div>
+<header class="relative bg-gradient-to-r from-indigo-900 to-purple-800 text-white py-4 shadow-md sticky top-0 z-50">
+  <!-- Filtro de opacidad para evitar que el fondo opaque los elementos -->
+  <div class="absolute inset-0 z-0 bg-black opacity-20"></div>
 
-		  <!-- Botones del Header -->
-		  <nav class="space-x-4">
-			<a href="/" class="bg-white text-neutral-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
-			  Inicio
-			</a>
-			<a href="/#herramientas" class="bg-white text-neutral-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
-			  Herramientas
-			</a>
-			<a href="#" class="bg-white text-neutral-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
-			  Contacto
-			</a>
-		  </nav>
-		</div>
-	</header>
+  <div class="container mx-auto flex justify-between items-center px-6 relative z-10">
+
+    <!-- Logo + Nombre del colegio -->
+    <div class="flex items-center space-x-6">
+      <a href="/">
+        <img src="logo-colegio.png" alt="Logo Colegio" class="h-14 w-auto rounded-lg shadow-md" />
+      </a>
+      <a href="/" class="text-3xl font-semibold tracking-wide text-white hover:text-[#F3E8FF] transition duration-300">San Luis Gonzaga</a>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="space-x-6 flex items-center">
+      <a href="/" class="text-lg font-medium text-white hover:text-[#F3E8FF] transition duration-300 py-2 px-4 rounded-lg hover:bg-[#5C2D91]">
+        Inicio
+      </a>
+      <a href="/herramientas" class="text-lg font-medium text-white hover:text-[#F3E8FF] transition duration-300 py-2 px-4 rounded-lg hover:bg-[#5C2D91]">
+        Herramientas
+      </a>
+      <a href="/contacto" class="text-lg font-medium text-white hover:text-[#F3E8FF] transition duration-300 py-2 px-4 rounded-lg hover:bg-[#5C2D91]">
+        Contacto
+      </a>
+    </nav>
+  </div>
+</header>
