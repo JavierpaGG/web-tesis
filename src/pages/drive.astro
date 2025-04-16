@@ -1,0 +1,287 @@
+---
+import "../styles/global.css"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import ChatBot from '../components/ChatBot.astro';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
+<Layout>
+    <Header/>
+    <main class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans py-12 min-h-screen">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+            <!-- Hero Section -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 border border-gray-100">
+                <div class="p-8 sm:p-10 text-center">
+                    <div class="inline-block bg-gradient-to-r from-blue-500 to-green-500 p-4 rounded-full mb-6">
+                        <i class="fab fa-google-drive text-white text-3xl"></i>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
+                        Colabora y organiza con <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">Google Drive</span>
+                    </h1>
+                    <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+                        La solución en la nube para almacenamiento, colaboración y gestión de archivos educativos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Sections -->
+            <div class="space-y-10">
+                <!-- Introducción -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-cloud text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">¿Por qué Drive para educación?</h2>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Google Drive ofrece un ecosistema completo para la educación que permite:
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Almacenamiento seguro e ilimitado para instituciones educativas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Colaboración en tiempo real en documentos, hojas de cálculo y presentaciones</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700">Integración perfecta con Google Classroom y otras herramientas G Suite</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                            <i class="fas fa-university text-blue-600 mr-2"></i> Drive para Instituciones
+                        </h3>
+                        <p class="text-gray-600 text-sm">Las escuelas pueden acceder a <strong>Google Drive ilimitado</strong> con Google Workspace for Education.</p>
+                    </div>
+                </section>
+
+                <!-- Funciones Educativas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-folder-open text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Funciones Clave para Educación</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-users text-blue-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Compartición Controlada</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Controla quién puede ver, comentar o editar cada archivo.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-history text-green-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Historial de Versiones</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Accede al historial completo de cambios en documentos.</p>
+                        </div>
+                        <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-search text-teal-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Búsqueda Avanzada</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Encuentra archivos rápidamente con filtros por tipo, propietario o fecha.</p>
+                        </div>
+                        <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-mobile-alt text-emerald-600 mr-2"></i>
+                                <h3 class="font-semibold text-gray-800">Acceso Offline</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Trabaja sin conexión y se sincroniza automáticamente.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Organización del Aula -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-teal-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-sitemap text-teal-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Estructura tus Archivos Educativos</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="group p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-lg transition-all text-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-blue-200 transition">
+                                <i class="fas fa-folder text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 mb-2">Estructura por Cursos</h3>
+                            <p class="text-gray-600 text-sm">Crea carpetas principales por asignatura o grupo.</p>
+                        </div>
+                        
+                        <div class="group p-4 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-lg transition-all text-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-green-200 transition">
+                                <i class="fas fa-calendar-alt text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 mb-2">Organización Temporal</h3>
+                            <p class="text-gray-600 text-sm">Subcarpetas por trimestres o unidades didácticas.</p>
+                        </div>
+                        
+                        <div class="group p-4 bg-white border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-lg transition-all text-center">
+                            <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-teal-200 transition">
+                                <i class="fas fa-tags text-teal-600 text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 mb-2">Etiquetado con Colores</h3>
+                            <p class="text-gray-600 text-sm">Asigna colores a carpetas para identificación visual.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-lg border border-blue-200">
+                        <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                            <i class="fas fa-lightbulb text-blue-600 mr-2"></i> Ejemplo de Estructura
+                        </h3>
+                        <ul class="text-gray-600 list-disc list-inside text-sm space-y-1">
+                            <li><strong>Carpeta Principal:</strong> Matemáticas 4°A</li>
+                            <li><strong>Subcarpetas:</strong> 1er Trimestre, 2do Trimestre, 3er Trimestre</li>
+                            <li><strong>Archivos clave:</strong> Programa.pdf, Evaluaciones.xlsx, Recursos</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Integraciones Educativas -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-emerald-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-puzzle-piece text-emerald-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Integraciones Esenciales</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition">
+                            <i class="fab fa-google text-blue-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Google Classroom</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition">
+                            <i class="fas fa-file-word text-blue-400 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Google Docs</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition">
+                            <i class="fas fa-file-excel text-green-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Google Sheets</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition">
+                            <i class="fas fa-file-powerpoint text-red-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Google Slides</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition">
+                            <i class="fas fa-file-pdf text-red-400 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">PDF Viewer</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition">
+                            <i class="fas fa-video text-purple-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Google Meet</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition">
+                            <i class="fas fa-sticky-note text-yellow-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Keep</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition">
+                            <i class="fas fa-draw-polygon text-orange-500 text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Jamboard</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Escenarios de Uso -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-chalkboard text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Escenarios Educativos</h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-green-50 rounded-lg border border-green-100">
+                            <h3 class="font-bold text-green-800 mb-2 flex items-center">
+                                <i class="fas fa-users mr-2"></i> Trabajos Colaborativos
+                            </h3>
+                            <p class="text-gray-700 text-sm">Los estudiantes pueden trabajar simultáneamente en documentos compartidos, con historial de cambios y comentarios para retroalimentación.</p>
+                        </div>
+                        
+                        <div class="p-4 bg-teal-50 rounded-lg border border-teal-100">
+                            <h3 class="font-bold text-teal-800 mb-2 flex items-center">
+                                <i class="fas fa-book mr-2"></i> Portafolios Digitales
+                            </h3>
+                            <p class="text-gray-700 text-sm">Crea carpetas compartidas donde los alumnos puedan subir sus trabajos y recibir comentarios a lo largo del curso.</p>
+                        </div>
+                        
+                        <div class="p-4 bg-emerald-50 rounded-lg border border-emerald-100">
+                            <h3 class="font-bold text-emerald-800 mb-2 flex items-center">
+                                <i class="fas fa-chalkboard-teacher mr-2"></i> Recursos Compartidos
+                            </h3>
+                            <p class="text-gray-700 text-sm">Mantén una biblioteca de recursos accesible para todo el departamento, con materiales organizados por temas y niveles.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Consejos para Docentes -->
+                <section class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-lightbulb text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Consejos para Docentes</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <h3 class="font-semibold text-blue-800 mb-2 flex items-center">
+                                <i class="fas fa-share-alt text-blue-600 mr-2"></i> Compartir Carpetas
+                            </h3>
+                            <p class="text-gray-600 text-sm">Comparte carpetas enteras con tu clase en lugar de archivos individuales.</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <h3 class="font-semibold text-green-800 mb-2 flex items-center">
+                                <i class="fas fa-star text-green-600 mr-2"></i> Estrella Importantes
+                            </h3>
+                            <p class="text-gray-600 text-sm">Marca archivos clave con estrellas para acceso rápido.</p>
+                        </div>
+                        
+                        <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
+                            <h3 class="font-semibold text-teal-800 mb-2 flex items-center">
+                                <i class="fas fa-filter text-teal-600 mr-2"></i> Filtros Avanzados
+                            </h3>
+                            <p class="text-gray-600 text-sm">Usa "propietario:tú" para encontrar rápidamente los archivos que has creado.</p>
+                        </div>
+                        
+                        <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                            <h3 class="font-semibold text-emerald-800 mb-2 flex items-center">
+                                <i class="fas fa-shield-alt text-emerald-600 mr-2"></i> Permisos Graduales
+                            </h3>
+                            <p class="text-gray-600 text-sm">Asigna "solo vista" a materiales y "editor" solo cuando sea necesario.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="bg-gradient-to-r from-blue-500 to-green-500 p-8 rounded-xl shadow-lg text-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">Transforma tu gestión educativa</h2>
+                    <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
+                        Descubre cómo Google Drive puede simplificar tu trabajo y mejorar la colaboración en el aula.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="https://edu.google.com/intl/ALL_es/products/workspace-for-education/" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="fab fa-google-drive mr-2"></i>
+                            Drive para Educación
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <ChatBot/>
+    </main>
+    <Footer/>
+</Layout>

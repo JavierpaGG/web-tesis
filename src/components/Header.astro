@@ -1,17 +1,16 @@
 ---
 import "../styles/global.css"
+import { ViewTransitions } from 'astro:transitions';
 ---
-<header class="relative bg-gradient-to-r from-indigo-900 to-purple-800 text-white py-4 shadow-md sticky top-0 z-50 w-full overflow-x-hidden">
+<header class="relative bg-gradient-to-r from-indigo-900 to-purple-800 text-white py-4 shadow-md sticky top-0 z-50 w-full">
   <!-- Fondo con opacidad -->
   <div class="absolute inset-0 bg-black opacity-20 z-0"></div>
 
-  <!-- Contenedor principal con responsive padding -->
   <div class="mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 w-full">
-
-    <!-- Logo + Nombre - Versión responsive -->
+    <!-- Logo + Nombre -->
     <div class="flex items-center space-x-2 md:space-x-4 lg:space-x-6">
       <a href="/" class="flex-shrink-0">
-        <img src="logo-colegio.png" alt="Logo Colegio" 
+        <img src="/logo-colegio.png" alt="Logo Colegio" 
              class="h-10 md:h-12 lg:h-14 w-auto rounded-lg shadow-md" />
       </a>
       <a href="/" class="hidden sm:block text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white hover:text-indigo-100 transition-colors duration-200">
@@ -19,7 +18,7 @@ import "../styles/global.css"
       </a>
     </div>
 
-    <!-- Navegación para desktop -->
+    <!-- Navegación desktop -->
     <nav class="hidden md:flex space-x-1 lg:space-x-2 xl:space-x-4 items-center">
       <a href="/" class="text-sm lg:text-base xl:text-lg font-medium text-white hover:text-indigo-100 transition-colors duration-200 py-2 px-2 lg:px-3 xl:px-4 rounded-lg hover:bg-indigo-700/50">
         Inicio
@@ -32,11 +31,58 @@ import "../styles/global.css"
       </a>
     </nav>
 
-    <!-- Menú hamburguesa para mobile -->
-    <button class="md:hidden p-1 rounded-md text-white hover:bg-indigo-700/50 focus:outline-none focus:ring-2 focus:ring-white">
+    <!-- Botón hamburguesa -->
+    <button id="menu-button" class="md:hidden p-2 rounded-md text-white hover:bg-indigo-700/50 focus:outline-none focus:ring-2 focus:ring-white">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
   </div>
+
+  <!-- Menú móvil (oculto por defecto) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-indigo-900/95 backdrop-blur-sm w-full absolute left-0 px-4 pb-4 shadow-lg transition-all duration-300">
+    <div class="flex flex-col space-y-2 pt-2">
+      <a href="/" class="block py-3 px-4 text-lg text-white hover:bg-indigo-700 rounded-lg transition-colors duration-200" data-astro-reload>
+        Inicio
+      </a>
+      <a href="/herramientas" class="block py-3 px-4 text-lg text-white hover:bg-indigo-700 rounded-lg transition-colors duration-200" data-astro-reload>
+        Herramientas
+      </a>
+      <a href="/contacto" class="block py-3 px-4 text-lg text-white hover:bg-indigo-700 rounded-lg transition-colors duration-200" data-astro-reload>
+        Contacto
+      </a>
+    </div>
+  </div>
+
+  <script is:inline>
+    // Script para manejar el menú móvil
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('animate-fadeIn');
+      });
+
+      // Cerrar menú al hacer clic en un enlace (útil para SPA)
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    });
+  </script>
 </header>
+
+<style is:global>
+  /* Animación para el menú móvil */
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
